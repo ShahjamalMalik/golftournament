@@ -1,0 +1,217 @@
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+	width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden; 
+}
+
+/* NAV */
+.navbar-expand-lg {
+	background-color: #0A0200;;
+}
+
+a.nav-link, a.navbar-brand{
+	margin: 0 4em 0 3em;
+}
+
+
+a.nav-link {
+  color: white;
+  text-decoration: none;
+}
+
+a.nav-link:hover {
+  color: white;
+  border-bottom: 1px solid red;
+}
+
+.navbar-toggler-icon.icon-bar{
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+  }
+
+/* END NAV */
+
+/* about landing header */
+.b-g{
+    background-image: url('../images/landing_page_background.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 500px;
+ }
+
+.h1bg{
+    color:white;
+    margin-top: 0.5em;
+    text-align: center;
+}
+
+.textBg{
+    text-align: center;
+}
+
+.animate-charcter
+{
+	margin-top: 1.5em;
+	text-transform: uppercase;
+	background-image: linear-gradient(to right top, #ffffff, #f3faff, #d7f9ff, #b2faff, #8efbff, #6eecfb, #48ddf8, #00cef5, #00aaf4, #0083ee, #0058dc, #0a1eb7);
+	background-size: auto auto;
+	background-clip: border-box;
+	background-size: 200% auto;
+	color: #fff;
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	animation: textclip 2s linear infinite;
+	display: inline-block;
+	font-size: 28px;
+
+}
+
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
+}
+
+.customBtn-registration{
+	margin-top: 2.5em;
+}
+
+.customBtn {
+  padding: 15px;
+  font-weight: 700;
+  font-size: 2rem;
+  text-decoration: none;
+  text-align: center;
+  transition: all .5s ease; 
+}
+
+.btn--registration {
+  color: #fff;
+  padding-right: 0;
+  background-color: #c0392b;
+  -webkit-clip-path: polygon(0% 0%, 100% 0, 100% 70%, 90% 100%, 0% 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 50%, 75% 100%, 0 100%);
+
+}
+
+.btn--registration:hover { 
+	color: white;	
+	-webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+	clip-path: polygon(0 0, 100% 0, 100% 100%, 100% 100%, 0 100%);  
+}
+
+.btn--registration:after {
+  content: "\f004";
+  color: #e74c3c;
+  font-family: FontAwesome;
+  display: inline-block;
+  position: relative;
+  right: -55px;
+  transition: all 0.2s ease;
+}
+
+.btn--registration:hover:after {
+  margin: -5px 15px;
+  right: 0px;
+
+}
+
+/* END landing header */
+
+
+.card-body{
+    text-align: center;
+    
+}
+/* FOOTER */
+
+.customFooter{
+	color: white;
+	background-color: black;
+	margin-top: 3em;
+	overflow-x: hidden;
+	border-top: red solid 0.5px;
+}
+
+
+.customFooter a{
+	margin: 2em;
+}
+
+.customAboutImg{
+    width:100%;
+    height:100%;
+}
+
+
+/* ABOUT PAGE */
+.aboutPage{
+    background-color: black;
+}
+.d-block{
+   height: 38em;
+}
+
+
+.aboutPageContentText {
+    color: white;
+    font-size: 18px;
+    margin-left: 30px;
+    margin-right: 10px;
+  }
+  
+  .aboutPageContentHeader {
+    color: white;
+    font-size: 28px;
+    margin-top: 1.5em;
+    margin-left: 60px;
+  }
+  
+  /* MOBILE */
+@media (max-width: 600px) {
+    .h1bg{
+        font-size: 25px;
+    }
+	.animate-charcter{
+	  font-size: 16px;
+	}
+	a.navbar-brand{
+	  margin-left: 1em;
+	}
+	  
+	.customFooter a{
+		margin: 0.2em;
+	}
+
+	a.nav-link{
+		text-align: center;
+	}
+    .d-block{
+        height: 20em;
+     }
+     .aboutPageContentText {
+        color: white;
+        font-size: 12px;
+        margin-left: 17px;
+    }
+    
+    .aboutPageContentHeader {
+        color: white;
+        font-size: 20px;
+        margin-top: 1.5em;
+        margin-left: 20px;
+    }
+    
+    
+	
+}
+
