@@ -2,6 +2,9 @@
 
 <!DOCTYPE html>
 <html lang="en">
+  <?php
+    include_once 'server/connect.php'; 
+  ?>
 	<head>
 		<meta charset ="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -22,7 +25,7 @@
     <div>
         <div>
             <nav class="navbar navbar-expand-lg">
-                <a class="navbar-brand" href="index.html"><img
+                <a class="navbar-brand" href="index.php"><img
                     src="images/ddsm-logo.png"
                     alt="ddsm-logo"
                     width="100"
@@ -39,10 +42,7 @@
                       <a class="nav-link" href="donate.html">Donate</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="photos.html">Photos</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="sponsors.html">Sponsors</a>
+                      <a class="nav-link" href="photos.php">Photos</a>
                     </li>
                     <li class="nav-item">
                       <a class="nav-link" href="store.html">Store</a>
@@ -51,14 +51,89 @@
                       <a class="nav-link" href="about.html">About</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="#">Admin</a>
+                      <a class="nav-link" href="admin.php">Admin</a>
                     </li>
                   </ul>
                 </div>
             </nav>
       
         </div>
-        <div>Work in process</div>
+        <div class="container">
+          <?php 
+            $path;
+            $counter = 0;
+            $admin = true;
+            
+            if($admin) {
+              $hidden="";
+            } else {
+              $hidden="hidden";
+            }
+            
+            $stmt = $dbh->query("SELECT * FROM images");
+            while($row = $stmt->fetch()) {//while there's still rows to fetch (images)
+              if($counter % 3 == 0) {//Do a check to see if the counter when divided by 3 (starting at 0 will be 0)
+                if($counter == 0) {//If the actual counter is 0, create a row because it'll be the first one
+                  echo '<div class="row">';
+                  $path = $row['picture_path'];
+                  $id = $row['picture_id'];
+                  echo '<div class="col-sm" style="margin:25px;border:2px solid black;">';
+                  echo '<img src="'.$path.'" style="margin:5px;" class="img-fluid" alt="Responsive image" id="'.$id.'">';
+                  echo '<div class="form-group">';
+                    echo '<form method="POST" action="server/deletePicture.php" style="text-align:center" '.$hidden.'>';
+                      echo '<button name="delete" value="'.$id.'"> Delete Photo </button>';
+                    echo '</form>';
+                  echo '</div>';
+                  echo '</div>';
+                  
+                  
+                    
+                  $counter += 1;
+                  continue;
+                } else {//if the counter modulo 3 is 0 and the counter does not equal 0, close the row, and insert a new row
+                  
+                  echo '</div>';
+                  echo '<div class="row">';
+                  echo $id;
+                  $path = $row['picture_path'];
+                  $id = $row['picture_id'];
+                  echo '<div class="col-sm" style="margin:25px;border:2px solid black;">';
+                  echo '<img src="'.$path.'" style="margin:5px;" class="img-fluid" alt="Responsive image" id="'.$id.'">';
+                  echo '<div class="form-group">';
+                    echo '<form method="POST" action="server/deletePicture.php" style="text-align:center" '.$hidden.'>';
+                      echo '<button name="delete" value="'.$id.'"> Delete Photo </button>';
+                    echo '</form>';
+                  echo '</div>';
+                  echo '</div>';
+                  $counter += 1;
+                  continue;
+                }
+              } else {
+                  
+                  $path = $row['picture_path'];
+                  $id = $row['picture_id'];
+                  echo '<div class="col-sm" style="margin:25px;border:2px solid black;">';
+                  echo '<img src="'.$path.'" style="margin:5px;" class="img-fluid" alt="Responsive image" id="'.$id.'">';
+                  echo '<div class="form-group">';
+                  echo '<form method="POST" action="server/deletePicture.php" style="text-align:center" '.$hidden.'>';
+                      echo '<button name="delete" value="'.$id.'"> Delete Photo </button>';
+                    echo '</form>';
+                  echo '</div>';
+                  echo '</div>';
+                  $counter += 1;
+                  continue;
+              }
+              
+            }
+            
+            
+          ?> 
+        </div>
+            
+            
+            
+          </div>
+        </div>
     </div>
     <!-- FOOTER -->
     <footer class="customFooter">

@@ -2,6 +2,9 @@
 
 <!DOCTYPE html>
 <html lang="en">
+  <?php   
+    include_once 'server/connect.php'; 
+  ?>
 	<head>
 		<meta charset ="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -21,7 +24,7 @@
 	<body>
     <div>
       <nav class="navbar navbar-expand-lg">
-        <a class="navbar-brand" href="index.html"><img
+        <a class="navbar-brand" href="index.php"><img
             src="images/ddsm-logo.png"
             alt="ddsm-logo"
             width="100"
@@ -38,10 +41,7 @@
               <a class="nav-link" href="donate.html">Donate</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="photos.html">Photos</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="sponsors.html">Sponsors</a>
+              <a class="nav-link" href="photos.php">Photos</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="store.html">Store</a>
@@ -50,7 +50,7 @@
               <a class="nav-link" href="about.html">About</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Admin</a>
+              <a class="nav-link" href="admin.php">Admin</a>
             </li>
           </ul>
         </div>
@@ -58,10 +58,22 @@
 
     </div>
 
-
+    <?php 
+      
+      $sql3 = $dbh->prepare('SELECT * FROM years ORDER BY year_id DESC LIMIT 1');
+      if($sql3->execute()) {
+        $row = $sql3->fetch(PDO::FETCH_OBJ);
+        $year_number = $row->year_number;
+        
+      } else{
+          //$row=$count->fetchAll();
+          print_r($dbo->errorInfo()); 
+      }
+      $year_number = $year_number . " ANNUAL Southwest Ontario Heart & Stroke";
+    ?>
     <div class="row">
       <div  class="container-fluid b-g">
-        <h1 class="h1bg">9TH ANNUAL Southwest Ontario Heart & Stroke</h1>
+        <h1 class="h1bg"><?php echo $year_number ?></h1>
         <div class="textBg">
           <a><img class="golflogo"
             src="images/ddsm-logo.png"
