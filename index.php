@@ -44,6 +44,9 @@
               <a class="nav-link" href="photos.php">Photos</a>
             </li>
             <li class="nav-item">
+              <a class="nav-link" href="sponsors.html">Sponsors</a>
+            </li>
+            <li class="nav-item">
               <a class="nav-link" href="store.html">Store</a>
             </li>
             <li class="nav-item">
@@ -253,7 +256,7 @@
           <br/>
           <h2 class="mb-4">Follow us</h2>
               <figure>
-                    <a href="#"><img src="images/icons/gmail.png" alt="Emai" width="60" height="60"/></a>
+                    <a href="mailto:danseginmemorialgolf@gmail.com"><img src="images/icons/gmail.png" alt="Emai" width="60" height="60"/></a>
                     <a href="https://www.facebook.com/danseginmemorialgolf"><img src="images/icons/facebook.png" alt="Facebook" width="60" height="60"/></a>
                     <a href="https://www.instagram.com/dandseginmemorialgolf/?fbclid=IwAR18jpY5QWajdv2qD22snOqdFg9yY8u1v3NKgMBsPdCKKcG0i_VwxMs1JhA"><img src="images/icons/instagram.png" alt="Instagram" width="60" height="60"/></a>
                     <a href="https://twitter.com/ddseginmemorialgolf?fbclid=IwAR1F73OqjgrOe_vMIIadhpUg82PvI5_XivgaN6U-w1LWB27fTJ3hmgEcYvI"><img src="images/icons/twitter.png" alt="Twitter" width="60" height="60"/></a>

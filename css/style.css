@@ -137,7 +137,7 @@ a.nav-link:hover {
 .customFooter{
 	color: white;
 	background-color: black;
-	margin-top: 3em;
+	margin-top: 6em;
 	overflow-x: hidden;
 	border-top: red solid 0.5px;
 }
@@ -158,29 +158,84 @@ a.nav-link:hover {
     background-color: black;
 }
 .d-block{
-   height: 38em;
+   height: 42em;
 }
 
 
 .aboutPageContentText {
-    color: white;
-    font-size: 18px;
-    margin-left: 30px;
-    margin-right: 10px;
-  }
-  
-  .aboutPageContentHeader {
-    color: white;
-    font-size: 28px;
-    margin-top: 1.5em;
-    margin-left: 60px;
-  }
-  
+  color: white;
+  font-size: 18px;
+  margin-left: 30px;
+  margin-right: 10px;
+}
+
+.aboutPageContentHeader {
+  color: white;
+  font-size: 28px;
+  margin-top: 1.5em;
+  margin-left: 60px;
+}
+
  .sponsorsLogo{
    border-bottom: black 2px solid;
  }
+
+ .headingRegistration{
+  padding-bottom: 1em;
+  background: #00F000;
+  background: -webkit-linear-gradient(to top right, #00F000 37%, #00D9D9 100%);
+  background: -moz-linear-gradient(to top right, #00F000 37%, #00D9D9 100%);
+  background: linear-gradient(to top right, #00F000 37%, #00D9D9 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 350px;
+  font-size: 40px;
+  
+ }
+
+ .headingDonation{
+
+  background: #fff833; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #fff833, #ff941a); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #fff833, #ff941a); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-weight: 350px;
+  font-size: 40px;
+
+ }
+ .customContactRegistration, .customTextRegistration{
+  color: red;
+ }
+
+ .styleCardRegistration{
+   background-color: rgb(45, 43, 43);
+ }
+
+
+ /* TEST */
+
+ .close {
+  font-size: 1.5rem;
+}
+
+.col-12 img {
+  opacity: 0.7;
+  cursor: pointer;
+  margin: 2rem;
+  width: 100%;
+}
+
+.col-12 img:hover {
+  opacity: 1;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+ /* =========== */
   /* MOBILE */
-@media (max-width: 600px) {
+@media (max-width: 768px) {
     .h1bg{
         font-size: 25px;
     }
@@ -213,7 +268,13 @@ a.nav-link:hover {
         margin-top: 1.5em;
         margin-left: 20px;
     }
-    
+
+    .headingRegistration, .headingDonation{
+      font-size: 25px;
+    }
+    .customTextRegistration{
+      font-size: 15px;
+    }
     
 	
 }

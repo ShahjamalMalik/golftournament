@@ -41,6 +41,9 @@
                   <a class="nav-link" href="photos.php">Photos</a>
                 </li>
                 <li class="nav-item">
+                      <a class="nav-link" href="sponsors.html">Sponsors</a>
+                    </li>
+                <li class="nav-item">
                   <a class="nav-link" href="store.html">Store</a>
                 </li>
                 <li class="nav-item">
@@ -52,27 +55,33 @@
               </ul>
             </div>
           </nav>
-    
-        <!-- Admin Page -->
-        
-
-
-        <div class="container">
-          <div class="row">
-            <div class="col-sm form-group">
-              <form action="server/addPicture.php" method="POST" enctype="multipart/form-data">
-                <div class="form-group" style="background-color: white;">
-                  Select Image Files to Upload:
-                  <input type="file" name="files[]" multiple >
-                  <input type="submit" name="submit" value="UPLOAD">
-                </div>
-              </form>
-            </div>
-            
+    </div>
+ 
+     <!-- Admin Page -->
+    <div class="d-flex justify-content-center mt-5 mb-5">
+      <div class="card" style="width: 52rem;">
+        <div class="card-header">
+          <h3>ADMIN</h3>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">
+            <form action="server/addPicture.php" method="POST" enctype="multipart/form-data">
+                  <div class="form-group" style="background-color: white;">
+                    <h5>Select Image Files to Upload:</h5>
+                  </div>
+                  <div class="form-group" style="background-color: white;">
+                    <input type="file" name="files[]" multiple >
+                  </div>
+                  <div class="form-group mt-5" style="background-color: white;">
+                    <input type="submit" class="btn btn-success" name="submit" value="UPLOAD">
+                  </div>
+            </form>
+          </li>
+          <li class="list-group-item">
             <form action="server/yearChange.php" method="POST" enctype="multipart/form-data">
               <div class="form-group" style="background-color: white;">
-                <label for="selectYear">Select year you would like to change to: </label>
-                <select class="form-control" name="selectYear" id="selectYear">
+                <h5><label for="selectYear">Select year you would like to change to: </label></h5>
+                <select class="form-control mb-5" name="selectYear" id="selectYear">
                   <option value="9TH">9TH</option>
                   <option value="10TH">10TH</option>
                   <option value="11TH">11TH</option>
@@ -87,17 +96,14 @@
                   <option value="20TH">20TH</option>
                   <option value="21ST">21ST</option>
                 </select>
-                <input type="submit" name="submit">
+                <input type="submit"class="btn btn-success" name="submit">
               </div>
             </form>
-            
-            <div class="col-sm form-group">
-            
-            </div>
-          </div>
-        </div>
- 
-        
+          </li>
+        </ul>
+      </div>
+    </div>
+
 
     <!-- FOOTER -->
     <footer class="customFooter">
@@ -107,7 +113,7 @@
           <br/>
           <h2 class="mb-4">Follow us</h2>
               <figure>
-                    <a href="#"><img src="images/icons/gmail.png" alt="Emai" width="60" height="60"/></a>
+                    <a href="mailto:danseginmemorialgolf@gmail.com"><img src="images/icons/gmail.png" alt="Emai" width="60" height="60"/></a>
                     <a href="https://www.facebook.com/danseginmemorialgolf"><img src="images/icons/facebook.png" alt="Facebook" width="60" height="60"/></a>
                     <a href="https://www.instagram.com/dandseginmemorialgolf/?fbclid=IwAR18jpY5QWajdv2qD22snOqdFg9yY8u1v3NKgMBsPdCKKcG0i_VwxMs1JhA"><img src="images/icons/instagram.png" alt="Instagram" width="60" height="60"/></a>
                     <a href="https://twitter.com/ddseginmemorialgolf?fbclid=IwAR1F73OqjgrOe_vMIIadhpUg82PvI5_XivgaN6U-w1LWB27fTJ3hmgEcYvI"><img src="images/icons/twitter.png" alt="Twitter" width="60" height="60"/></a>
@@ -118,12 +124,11 @@
         </div>
       </div>  
       <div class="row justify-content-md-center">
-    </footer>
-       
-</div>
+    </footer>  
+    </div>
 
  
-    </body>
+  </body>
 </html>
 
 <?php
