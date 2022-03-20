@@ -14,17 +14,26 @@ body {
 
 /* NAV */
 .navbar-expand-lg {
-	background-color: #0A0200;;
+	background-color: #ED1B24;
+    height: 85px;
 }
 
-a.nav-link, a.navbar-brand{
+a.navbar-brand{
 	margin: 0 3em 0 2.5em;
+    background-color: white;
+    border-radius: 25px;
 }
+
+
 
 
 a.nav-link {
-  color: white;
-  text-decoration: none;
+    font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-size: 0.95rem;
+    color: #fff;
+    letter-spacing: 0.0625em;
+    margin: 0 3em 0 2.5em;
+    font-weight: bold;
 }
 
 a.nav-link:hover {
@@ -40,7 +49,7 @@ a.nav-link:hover {
 
 /* about landing header */
 .b-g{
-    background-image: url('../images/landing_page_background.png');
+    background-image: url('../images/DSC_1767.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -51,6 +60,7 @@ a.nav-link:hover {
     color:white;
     margin-top: 0.5em;
     text-align: center;
+    font-family: "Roboto Slab", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
 .textBg{
@@ -59,20 +69,13 @@ a.nav-link:hover {
 
 .animate-charcter
 {
-	margin-top: 1.5em;
-	text-transform: uppercase;
-	background-image: linear-gradient(to right top, #ffffff, #f3faff, #d7f9ff, #b2faff, #8efbff, #6eecfb, #48ddf8, #00cef5, #00aaf4, #0083ee, #0058dc, #0a1eb7);
-	background-size: auto auto;
-	background-clip: border-box;
-	background-size: 200% auto;
-	color: #fff;
-	background-clip: text;
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
-	animation: textclip 2s linear infinite;
-	display: inline-block;
-	font-size: 28px;
-
+    margin-top: 1.5em;
+    margin-bottom: 2rem;
+    color:white;
+    font-size: 3.25rem;
+    font-weight: 700;
+    line-height: 3.25rem;  
+    font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
 @keyframes textclip {
