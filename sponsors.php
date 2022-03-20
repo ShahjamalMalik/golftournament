@@ -42,7 +42,7 @@
                   <a class="nav-link" href="photos.php">Photos</a>
                 </li>
                 <li class="nav-item">
-                      <a class="nav-link" href="sponsors.html">Sponsors</a>
+                      <a class="nav-link" href="sponsors.php">Sponsors</a>
                     </li>
                 <li class="nav-item">
                   <a class="nav-link" href="store.html">Store</a>
@@ -129,10 +129,11 @@
                             echo '<img class="d-block w-100 h-auto" src="'.$paths[$i].'"/>';
                             echo '</div>';
                         }else{
-                            echo '<h4>Sponsor Name: "'.$pathsName[0].'"</h4>';
-                            echo '<h4 "'.$hiddenDescription.'">Description: "'.trim($pathsDescription[1], '"').'"</h4>';
-                            echo '<a  "'.$hiddenLink.'" href=""'.$pathsLink[0].'""><h4>Website Link: "'.$pathsLink[1].'"</h4></a>';
+                            
                             echo '<div class="carousel-item ">';
+                            echo '<h4>Sponsor Name: "'.$pathsName[$i].'"</h4>';
+                            echo '<h4 "'.$hiddenDescription.'">Description: "'.trim($pathsDescription[$i], '"').'"</h4>';
+                            echo '<a  "'.$hiddenLink.'" href=""'.$pathsLink[$i].'""><h4>Website Link: "'.$pathsLink[$i].'"</h4></a>';
                             echo '<div class="form-group">';
                             echo '<form method="POST" action="server/deleteSponsorPicture.php" style="text-align:center" '.$hidden.'>';
                             echo '<button name="delete" value="'.$idArray[$i].'"> Delete Photo </button>';
