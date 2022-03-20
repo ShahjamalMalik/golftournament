@@ -164,7 +164,7 @@
                 height="60"
                 
               />
-              <h5 class="card-title">Scheduled &rarr;</h5>
+              <h5 class="card-title">Schedule &rarr;</h5>
               <br>
               <p class="card-text">12:00 PM SHOTGUN START</p>
               <p class="card-text">Saturday June 4th 2022</p>
