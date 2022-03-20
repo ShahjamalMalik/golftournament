@@ -111,7 +111,7 @@
         </div>
         <div class="col-lg-auto d-flex justify-content-center mt-5" >
           <div class="card shadow bg-white border border-dark" style="width: 23rem; height: 20rem;">
-            <div class="card-body ">
+            <div class="card-body">
               <img class="iconCustom"
                 src="images/icons/support_heart_and_stroke.png"
                 alt="Girl in a jacket"
@@ -119,28 +119,28 @@
                 height="60"    
               />
               <br>
-              <h5 class="card-title">Support Heart and Stroke &rarr;</h5>
+              <h4 class="card-title">Support Heart and Stroke &rarr;</h4>
               <br>
-              <p class="card-text"> Make a Donation Today!</p>
+              <h5 class="card-text"> Make a Donation Today!</h5>
               <br>
-              <a href="donate.html" class="btn btn-dark btn-lg"> Click Me</a>
+              <p class="btn btn-dark btn-lg" style="background:black;"> Click Me</p>
             </div>
           </div>
         </div>
         <div class="col-lg-auto d-flex justify-content-center mt-5">
           <div class="card shadow bg-white  border border-dark" style="width: 23rem; height: 20rem;">
-            <div class="card-body">
-              <img
+            <div class="card-body" style="border:3px solid black;">
+              <img class="iconCustom"
                 src="images/icons/virtual_silent_auction.png"
                 alt="Girl in a jacket"
                 width="80"
                 height="60"
               />
             
-              <h5 class="card-title">Virtual Silent Auction &rarr;</h5>
-              <p class="card-text">Work in Process.</p>
+              <h4 class="card-title">Virtual Silent Auction &rarr;</h4>
+              <h5 class="card-text">Work in Process.</h5>
                 <br>
-                <a href="#" class="btn btn-dark btn-lg"> Click Me</a>
+                <a href="#" class="btn btn-dark btn-lg" style="background:black;"> Click Me</a>
             </div>
           </div>
         </div>
@@ -156,7 +156,7 @@
         </div>
         <div class="col-lg-auto d-flex justify-content-center mt-5" >
           <div class="card shadow bg-white  border border-dark" style="width: 23rem; height: 20rem;">
-            <div class="card-body">
+            <div class="card-body" style="border:3px solid black;">
               <img class="iconCustom"
                 src="images/icons/scheduled_tee_times.png"
                 alt="Girl in a jacket"
@@ -164,28 +164,28 @@
                 height="60"
                 
               />
-              <h5 class="card-title">Schedule &rarr;</h5>
+              <h4 class="card-title">Schedule &rarr;</h4>
               <br>
-              <p class="card-text">12:00 PM SHOTGUN START</p>
-              <p class="card-text">Saturday June 4th 2022</p>
-                <a href="registration.html" class="btn btn-dark btn-lg"> Click Me</a>
+              <h5 class="card-text">12:00 PM SHOTGUN START</h5>
+              <h6 class="card-text">Saturday June 4th 2022</h6>
+                <a href="registration.html" class="btn btn-dark btn-lg" style="background:black;"> Click Me</a>
             </div>
           </div>
         </div>
         <div class="col-lg-auto d-flex justify-content-center mt-5">
           <div class="card shadow bg-white  border border-dark" style="width: 23rem; height: 20rem;">
-            <div class="card-body">
-              <img
+            <div class="card-body" style="border:3px solid black;">
+              <img class="iconCustom"
                 src="images/icons/raffle.png"
                 alt="Girl in a jacket"
                 width="80"
                 height="60"
               />
             
-              <h5 class="card-title">Raffle Prizes Day &rarr;</h5>
-              <p class="card-text">For More Information Please Click on the Button Bellow.</p>
+              <h4 class="card-title">Raffle Prizes Day &rarr;</h4>
+              <h5 class="card-text">For More Information Please Click on the Button Bellow.</h5>
                 <br>
-                <a href="registration.html" class="btn btn-dark btn-lg"> Click Me</a>
+                <a href="registration.html" class="btn btn-dark btn-lg" style="background:black;"> Click Me</a>
             </div>
           </div>
         </div>
@@ -202,7 +202,7 @@
         </div>
         <div class="col-lg-auto d-flex justify-content-center mt-5" >
           <div class="card shadow bg-white  border border-dark" style="width: 23rem; height: 20rem;">
-            <div class="card-body">
+            <div class="card-body" style="border:3px solid black;">
               <img class="iconCustom"
                 src="images/icons/dinner_or_lunch.png"
                 alt="Girl in a jacket"
@@ -211,29 +211,29 @@
                 
               />
               <br>
-              <h5 class="card-title">Dinner &rarr;</h5>
+              <h4 class="card-title">Dinner &rarr;</h4>
               <br>
-              <p class="card-text">BBQ Banquet Dinner</p>
+              <h5 class="card-text">BBQ Banquet Dinner</h5>
                 <br>
-                <a href="registration.html" class="btn btn-dark btn-lg"> Click Me</a>
+                <a href="registration.html" class="btn btn-dark btn-lg" style="background:black;"> Click Me</a>
             </div>
           </div>
         </div>
         <div class="col-lg-auto d-flex justify-content-center mt-5">
           <div class="card shadow bg-white  border border-dark" style="width: 23rem; height: 20rem;">
-            <div class="card-body">
-              <img
+            <div class="card-body" style="border:3px solid black;">
+              <img class="iconCustom"
                 src="images/icons/corporate_sponsorships.png"
                 alt="Girl in a jacket"
                 width="80"
                 height="60"
               />
             
-              <h5 class="card-title">Corporate Sponsorships &rarr;</h5>
-              <p class="card-text">Thank You for Your Contribution</p>
+              <h4 class="card-title">Corporate Sponsorships &rarr;</h4>
+              <h5 class="card-text">Thank You for Your Contribution</h5>
               <p class="card-text">Toward a Great Cause !</p>
                 <br>
-                <a href="sponsors.html" class="btn btn-dark btn-lg"> Click Me</a>
+                <a href="sponsors.html" class="btn btn-dark btn-lg" style="background:black;"> Click Me</a>
             </div>
           </div>
         </div>

@@ -14,7 +14,7 @@ body {
 
 /* NAV */
 .navbar-expand-lg {
-	background-color: #ED1B24;
+  background-color: black;
     height: 85px;
 }
 
@@ -53,12 +53,12 @@ a.nav-link:hover {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 500px;
+    height: 100vh;
  }
 
 .h1bg{
     color:white;
-    margin-top: 0.5em;
+    margin-top: 5.5em;
     text-align: center;
     font-family: "Roboto Slab", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
@@ -133,8 +133,15 @@ a.nav-link:hover {
 
 .card-body{
     text-align: center;
-    
+    border: 3px solid black;
 }
+
+
+.iconCustom {
+  margin-bottom: 10px;
+}
+
+
 /* FOOTER */
 
 .customFooter{
