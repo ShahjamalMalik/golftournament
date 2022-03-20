@@ -101,6 +101,27 @@
               </div>
             </form>
           </li>
+          <li class="list-group-item">
+            <form action="server/addSponsor.php" method="POST" enctype="multipart/form-data">
+                <div class="form-group" style="background-color: white;">
+                  <h5><label for="sponsor">Sponsor Name: </label></h5>
+                  <input required type="text" name="sponsor" id="sponsor">
+                </div>
+                <div class="form-group" style="background-color: white;">
+                  <h5><label for="sponsorDescription">Sponsor Description: </label></h5>
+                  <input type="text" name="sponsorDescription" id="sponsorDescription">
+                </div>
+                <div class="form-group" style="background-color: white;">
+                  <h5><label for="sponsorWebsite">Sponsor Website Link: </label></h5>
+                  <input type="url" name="sponsorWebsite" id="sponsorWebsite">
+                </div>
+                <div class="form-group" style="background-color: white;">
+                  <h5><label for="sponsorLogo">Upload Sponsor Logo: </label></h5>
+                  <input type="file" name="sponsorLogo" id="sponsorLogo">
+                </div>
+                <input type="submit"class="btn btn-success" name="submit">
+              </form>
+          </li>
         </ul>
       </div>
     </div>
