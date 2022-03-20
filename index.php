@@ -9,8 +9,9 @@
 		<meta charset ="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="stylesheet" href="css/style.css">
-		<title></title>
-		
+		<title>DEVELOPMENT - Dan Segin Golf Tournament Website</title>
+    <link rel="icon" href="images/ddsm-logo.png" />
+
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
@@ -120,9 +121,9 @@
               <br>
               <h5 class="card-title">Support Heart and Stroke &rarr;</h5>
               <br>
-              <p class="card-text"> Make a donation today!</p>
+              <p class="card-text"> Make a Donation Today!</p>
               <br>
-              <a href="#" class="btn btn-dark btn-lg"> Click Me</a>
+              <a href="donate.html" class="btn btn-dark btn-lg"> Click Me</a>
             </div>
           </div>
         </div>
@@ -137,8 +138,7 @@
               />
             
               <h5 class="card-title">Virtual Silent Auction &rarr;</h5>
-              <p class="card-text"> Virtual Silent Auction with a chance to win sport memoriabilia
-                such as [Examples] from our partners (Company Hosting Auction).</p>
+              <p class="card-text">Work in Process.</p>
                 <br>
                 <a href="#" class="btn btn-dark btn-lg"> Click Me</a>
             </div>
@@ -164,12 +164,11 @@
                 height="60"
                 
               />
-              <h5 class="card-title">Scheduled Tee Times &rarr;</h5>
+              <h5 class="card-title">Scheduled &rarr;</h5>
               <br>
-              <p class="card-text">To keep you safe, tee off is in groups of up to 4 players every 15
-                minutes. Tee times selected during registration.</p>
-               
-                <a href="#" class="btn btn-dark btn-lg"> Click Me</a>
+              <p class="card-text">12:00 PM SHOTGUN START</p>
+              <p class="card-text">Saturday June 4th 2022</p>
+                <a href="registration.html" class="btn btn-dark btn-lg"> Click Me</a>
             </div>
           </div>
         </div>
@@ -184,10 +183,9 @@
               />
             
               <h5 class="card-title">Raffle Prizes Day &rarr;</h5>
-              <p class="card-text">Buy raffle tickets on our Web Store or the day of the tournament!
-                Prizes include: Prize 1, Prize 2 etc.</p>
+              <p class="card-text">For More Information Please Click on the Button Bellow.</p>
                 <br>
-                <a href="#" class="btn btn-dark btn-lg"> Click Me</a>
+                <a href="registration.html" class="btn btn-dark btn-lg"> Click Me</a>
             </div>
           </div>
         </div>
@@ -213,12 +211,11 @@
                 
               />
               <br>
-              <h5 class="card-title">Dinner or Lunch Included &rarr;</h5>
+              <h5 class="card-title">Dinner &rarr;</h5>
               <br>
-              <p class="card-text">   Every Registrant gets to choose between a BBQ Lunch or Dinner!
-                Options include Beef, Chicken, or a Vegetarian option.</p>
+              <p class="card-text">BBQ Banquet Dinner</p>
                 <br>
-                <a href="#" class="btn btn-dark btn-lg"> Click Me</a>
+                <a href="registration.html" class="btn btn-dark btn-lg"> Click Me</a>
             </div>
           </div>
         </div>
@@ -233,11 +230,10 @@
               />
             
               <h5 class="card-title">Corporate Sponsorships &rarr;</h5>
-              <p class="card-text">   Does your business want to give back? Business donation can pay
-                for Hole Sponsorship, Website Footer space and a feature on our
-                Sponsor Page!</p>
+              <p class="card-text">Thank You for Your Contribution</p>
+              <p class="card-text">Toward a Great Cause !</p>
                 <br>
-                <a href="#" class="btn btn-dark btn-lg"> Click Me</a>
+                <a href="sponsors.html" class="btn btn-dark btn-lg"> Click Me</a>
             </div>
           </div>
         </div>

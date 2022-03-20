@@ -1,7 +1,7 @@
 <?php
 try {
     $dbh = new PDO(
-        "mysql:host=localhost;dbname=golft_tournament", //FIX THIS (should be golf_tournament)
+        "mysql:host=localhost;dbname=golf_tournament", //FIX THIS (should be golf_tournament)
         "root",
         ""
     );
