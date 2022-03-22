@@ -56,7 +56,7 @@ a.nav-link:hover {
 
 .h1bg{
     color:white;
-    margin-top: 5.5em;
+    margin-top: 4.8em;
     text-align: center;
     font-family: "Roboto Slab", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
@@ -167,7 +167,7 @@ a.nav-link:hover {
     background-color: black;
 }
 .d-block{
-   height: 42em;
+  max-height: 47em;
 }
 
 
@@ -244,19 +244,18 @@ a.nav-link:hover {
  
  /* =========== */
   /* MOBILE */
-@media (max-width: 768px) {
+@media (max-width: 540px) {
   .h1bg{
-      font-size: 24px;
-      margin-top: 0.7em;
+      font-size: 23px;
   }
   
   .golflogo{
-    width: 90;
+    width: 80;
     height: auto;
   }
 	.animate-charcter{
-	  font-size: 16px;
-    margin: 0;
+	  font-size: 27px;
+    margin-top: 0.3em;
 	}
 	a.navbar-brand{
 	  margin-left: 1em;
@@ -272,11 +271,11 @@ a.nav-link:hover {
   .d-block{
       height: 20em;
     }
-    .aboutPageContentText {
-      color: white;
-      font-size: 12px;
-      margin-left: 17px;
-  }
+  .aboutPageContentText {
+    color: white;
+    font-size: 12px;
+    margin-left: 17px;
+}
   
   .aboutPageContentHeader {
       color: white;
@@ -298,4 +297,21 @@ a.nav-link:hover {
   
 	
 }
+
+@media screen and (min-width : 540px) and (max-width : 1024px){
+  .h1bg{
+    font-size: 32px;
+    
+  }
+
+  .golflogo{
+    width: 90;
+    height: auto;
+  }
+  .animate-charcter{
+    font-size: 36px;
+    margin-top: 1em;
+  }
+}
+
 
