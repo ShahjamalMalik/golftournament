@@ -117,14 +117,12 @@
                         //making modal - popup image
                         $i = 0;
                         while($i < count($paths)) {
-                        if($i == 0){
-                            
+                        if($i == 0){                           
                             echo '<h1></h1>';
                             echo '<div class="carousel-item active">';
                             echo '<h4>Sponsor Name: "'.$pathsName[$i].'"</h4>';                    
                             echo '<h4 "'.$hiddenDescription.'">Description: "'.trim($pathsDescription[$i], '"').'"</h4>';
                             echo '<a  "'.$hiddenLink.'" href=""'.$pathsLink[$i].'""><h4>Website Link: "'.$pathsLink[$i].'"</h4></a>';
-
                             echo '<div class="form-group">';
                             echo '<form method="POST" action="server/deleteSponsorPicture.php" style="text-align:center" '.$hidden.'>';
                             echo '<button name="delete" value="'.$idArray[$i].'"> Delete Photo</button>';
