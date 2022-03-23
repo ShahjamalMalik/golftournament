@@ -122,7 +122,6 @@
                             echo '<div class="carousel-item active">';
                             echo '<h4>Sponsor Name: "'.$pathsName[$i].'"</h4>';                    
                             echo '<h4 "'.$hiddenDescription.'">Description: "'.trim($pathsDescription[$i], '"').'"</h4>';
-<<<<<<< HEAD
                             echo '<a  "'.$hiddenLink.'" href="'.$pathsLink[$i].'"><h4>Website Link: "'.$pathsLink[$i].'"</h4></a>';
 =======
                             echo '<a  "'.$hiddenLink.'" href=""'.$pathsLink[$i].'""><h4>Website Link: "'.$pathsLink[$i].'"</h4></a>';
