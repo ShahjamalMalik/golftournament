@@ -117,14 +117,16 @@
                         //making modal - popup image
                         $i = 0;
                         while($i < count($paths)) {
-                        if($i == 0){
-                            
+                        if($i == 0){                           
                             echo '<h1></h1>';
                             echo '<div class="carousel-item active">';
                             echo '<h4>Sponsor Name: "'.$pathsName[$i].'"</h4>';                    
                             echo '<h4 "'.$hiddenDescription.'">Description: "'.trim($pathsDescription[$i], '"').'"</h4>';
+<<<<<<< HEAD
+                            echo '<a  "'.$hiddenLink.'" href="'.$pathsLink[$i].'"><h4>Website Link: "'.$pathsLink[$i].'"</h4></a>';
+=======
                             echo '<a  "'.$hiddenLink.'" href=""'.$pathsLink[$i].'""><h4>Website Link: "'.$pathsLink[$i].'"</h4></a>';
-
+>>>>>>> 530529458995260dc46498ac52179800ef991b4f
                             echo '<div class="form-group">';
                             echo '<form method="POST" action="server/deleteSponsorPicture.php" style="text-align:center" '.$hidden.'>';
                             echo '<button name="delete" value="'.$idArray[$i].'"> Delete Photo</button>';
@@ -137,7 +139,7 @@
                             echo '<div class="carousel-item ">';
                             echo '<h4>Sponsor Name: "'.$pathsName[$i].'"</h4>';
                             echo '<h4 "'.$hiddenDescription.'">Description: "'.trim($pathsDescription[$i], '"').'"</h4>';
-                            echo '<a  "'.$hiddenLink.'" href=""'.$pathsLink[$i].'""><h4>Website Link: "'.$pathsLink[$i].'"</h4></a>';
+                            echo '<a  "'.$hiddenLink.'" href="'.$pathsLink[$i].'"><h4>Website Link: "'.$pathsLink[$i].'"</h4></a>';
                             echo '<div class="form-group">';
                             echo '<form method="POST" action="server/deleteSponsorPicture.php" style="text-align:center" '.$hidden.'>';
                             echo '<button name="delete" value="'.$idArray[$i].'"> Delete Photo </button>';
@@ -167,7 +169,7 @@
     </div>
     
     <!-- FOOTER -->
-    <footer class="customFooter">
+    <footer class="customFooter" style="margin-top: 55em;">
       <div class="row justify-content-md-center">
         <div class="col-md-auto">
           <div class="d-flex flex-column align-items-center">

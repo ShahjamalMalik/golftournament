@@ -143,7 +143,7 @@
       </div>
     </div>
     <!-- FOOTER -->
-    <footer class="customFooter">
+    <footer class="customFooter" style="margin-top: 40em;">
       <div class="row justify-content-md-center">
         <div class="col-md-auto">
           <div class="d-flex flex-column align-items-center">
