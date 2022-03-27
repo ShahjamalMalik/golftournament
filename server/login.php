@@ -14,14 +14,15 @@
     } else{
         while ($row = $result->fetch()) {
             //echo 'Yes we have a match and the email is '.$row['admin_email'];
-            if(password_verify($passwordClean, $row['admin_password'])){
+            if(password_verify($passwordClean, $row['admin_pass'])){
                 $_SESSION['id']=$row['admin_id'];
                 echo '<br/>The Session ID is '.$_SESSION['id'];
-                header("Location: ../index.php");
+               // header("Location: ../index.php");
+               // break;
             }else{
                 array_push($errorArray, 'Wrong Password');
 
-                echo $errorArray;
+                echo json_encode($errorArray);
             }
         }
     }
