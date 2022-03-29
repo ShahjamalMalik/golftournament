@@ -73,7 +73,7 @@
           //$row=$count->fetchAll();
           print_r($dbo->errorInfo()); 
       }
-      $year_number = $year_number . " ANNUAL Southwest Ontario Heart & Stroke";
+      $year_number = $year_number . "  ANNUAL ONTARIO CENTRAL WEST & NORTH REGIONS";
     ?>
     <div class="row">
       <div  class="container-fluid b-g">
@@ -92,7 +92,7 @@
             <div>
               <div class="content">
                 <div class="customBtn-registration">
-                <a href="/registration" class="customBtn btn--registration">Register</a>
+                <a href="/registration.html" class="customBtn btn--registration">Register</a>
                 </div>
               </div>
             </div>
@@ -255,7 +255,7 @@
                     <a href="mailto:danseginmemorialgolf@gmail.com"><img src="images/icons/gmail.png" alt="Emai" width="60" height="60"/></a>
                     <a href="https://www.facebook.com/danseginmemorialgolf"><img src="images/icons/facebook.png" alt="Facebook" width="60" height="60"/></a>
                     <a href="https://www.instagram.com/dandseginmemorialgolf/?fbclid=IwAR18jpY5QWajdv2qD22snOqdFg9yY8u1v3NKgMBsPdCKKcG0i_VwxMs1JhA"><img src="images/icons/instagram.png" alt="Instagram" width="60" height="60"/></a>
-                    <a href="https://twitter.com/ddseginmemorialgolf?fbclid=IwAR1F73OqjgrOe_vMIIadhpUg82PvI5_XivgaN6U-w1LWB27fTJ3hmgEcYvI"><img src="images/icons/twitter.png" alt="Twitter" width="60" height="60"/></a>
+                    <a href="https://twitter.com/ddseginmemorial"><img src="images/icons/twitter.png" alt="Twitter" width="60" height="60"/></a>
                     <br/>
                                         
                 </figure>
