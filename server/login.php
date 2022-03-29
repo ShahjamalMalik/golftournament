@@ -15,9 +15,10 @@
         while ($row = $result->fetch()) {
             //echo 'Yes we have a match and the email is '.$row['admin_email'];
             if(password_verify($passwordClean, $row['admin_pass'])){
-                $_SESSION['id']=$row['admin_id'];
+                $_SESSION['id']=1;
+                $_SESSION['adminHide'] = 'hidden';
                 echo '<br/>The Session ID is '.$_SESSION['id'];
-               // header("Location: ../index.php");
+                header("Location: ../index.php");
                // break;
             }else{
                 array_push($errorArray, 'Wrong Password');

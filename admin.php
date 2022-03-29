@@ -21,7 +21,7 @@
 	</head>	
 	<body>
     <div class="aboutPage">
-        <nav class="navbar navbar-expand-lg">
+    <nav class="navbar navbar-expand-lg">
             <a class="navbar-brand" href="index.php"><img
                 src="images/ddsm-logo.png"
                 alt="ddsm-logo"
@@ -33,26 +33,28 @@
             <div class="collapse navbar-collapse" id="navbarNav">
               <ul class="navbar-nav">
                 <li class="nav-item active">
-                  <a class="nav-link" href="registration.html">Registration <span class="sr-only">(current)</span></a>
+                  <a class="nav-link" href="registration.php">Registration <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="donate.html">Donate</a>
+                  <a class="nav-link" href="donate.php">Donate</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="photos.php">Photos</a>
                 </li>
                 <li class="nav-item">
-                      <a class="nav-link" href="sponsors.php">Sponsors</a>
-                    </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="store.html">Store</a>
+                  <a class="nav-link" href="sponsors.php">Sponsors</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="about.html">About</a>
+                  <a class="nav-link" href="store.php">Store</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="admin.php">Admin</a>
+                  <a class="nav-link" href="about.php">About</a>
                 </li>
+                <?php 
+                  echo '<li class="nav-item">';
+                  echo  '<a class="nav-link" href="admin.php">Admin</a>';
+                  echo '</li>';
+                ?>
               </ul>
             </div>
           </nav>
@@ -122,6 +124,11 @@
                 <input type="submit"class="btn btn-success" name="submit">
               </form>
           </li>
+          <li class="list-group-item">
+            <form action="server/logout.php" method="POST" enctype="multipart/form-data">
+              <input type="submit"class="btn btn-success" value="Logout" name="submit">
+            </form>
+          </li>
         </ul>
       </div>
     </div>
@@ -153,4 +160,4 @@
   </body>
 </html>
 
-<?php
+
