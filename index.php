@@ -2,10 +2,12 @@
   session_start();
   $hidden;
 
- 
-  if($_SESSION['id'] == 1) {
-    $_SESSION['adminHide'] = '';
-    
+  if(isset($_SESSION['id'])) {
+    if($_SESSION['id'] == 1){
+      $_SESSION['adminHide'] = '';
+    }else{
+      $_SESSION['adminHide'] = 'hidden';
+    }
   } else {
     $_SESSION['adminHide'] = 'hidden';
   }
@@ -69,6 +71,7 @@
                   echo  '<a '.$_SESSION['adminHide'].' class="nav-link" href="admin.php">Admin</a>';
                   echo '</li>';
                 ?>
+                
               </ul>
             </div>
           </nav>
@@ -105,7 +108,7 @@
             <div>
               <div class="content">
                 <div class="customBtn-registration">
-                <a href="/registration.html" class="customBtn btn--registration">Register</a>
+                <a href="registration.php" class="customBtn btn--registration">Register</a>
                 </div>
               </div>
             </div>

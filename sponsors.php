@@ -137,7 +137,7 @@
                             echo '<h4 "'.$hiddenDescription.'">Description: "'.trim($pathsDescription[$i], '"').'"</h4>';
                             echo '<a  "'.$hiddenLink.'" href="'.$pathsLink[$i].'"><h4>Website Link: "'.$pathsLink[$i].'"</h4></a>';
                             echo '<div class="form-group">';
-                            echo '<form method="POST" action="server/deleteSponsorPicture.php" style="text-align:center" '.$hidden.'>';
+                            echo '<form method="POST" action="server/deleteSponsorPicture.php" style="text-align:center" '.$_SESSION['adminHide'].'>';
                             echo '<button name="delete" value="'.$idArray[$i].'"> Delete Photo</button>';
                             echo '</form>';
                             echo '</div>';
@@ -150,7 +150,7 @@
                             echo '<h4 "'.$hiddenDescription.'">Description: "'.trim($pathsDescription[$i], '"').'"</h4>';
                             echo '<a  "'.$hiddenLink.'" href="'.$pathsLink[$i].'"><h4>Website Link: "'.$pathsLink[$i].'"</h4></a>';
                             echo '<div class="form-group">';
-                            echo '<form method="POST" action="server/deleteSponsorPicture.php" style="text-align:center" '.$hidden.'>';
+                            echo '<form method="POST" action="server/deleteSponsorPicture.php" style="text-align:center" '.$_SESSION['adminHide'].'>';
                             echo '<button name="delete" value="'.$idArray[$i].'"> Delete Photo </button>';
                             echo '</form>';
                             echo '</div>';

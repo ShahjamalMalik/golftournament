@@ -17,9 +17,12 @@
             if(password_verify($passwordClean, $row['admin_pass'])){
                 $_SESSION['id']=1;
                 $_SESSION['adminHide'] = 'hidden';
-                echo '<br/>The Session ID is '.$_SESSION['id'];
-                header("Location: ../index.php");
+                //echo '<br/>The Session ID is '.$_SESSION['id'];
+                //header("Location: ../index.php");
                // break;
+               array_push($errorArray, 'SUCCESS');
+
+               echo json_encode($errorArray);
             }else{
                 array_push($errorArray, 'Wrong Password');
 

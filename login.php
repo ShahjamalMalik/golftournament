@@ -81,7 +81,11 @@
         </div>
         <ul class="list-group list-group-flush">
           <li class="list-group-item">
-            <form action="server/login.php" method="POST" enctype="multipart/form-data">
+          <?php 
+            echo '<h3 '.$_SESSION['adminHide'].' >You already logged in </h3>';
+
+          ?>
+          <form action="server/login.php" method="POST" enctype="multipart/form-data">
                 <div class="form-group" style="background-color: white;">
                   <h5><label for="adminEmail">Email: </label></h5>
                   <input type="text" name="adminEmail" id="adminEmail">
@@ -133,7 +137,12 @@
                     success: function(json){
                         
                         if(json[0]) {
+                          if(json[0] == "SUCCESS"){
+                            $("#errorMessage").html("Logged in successfully");
+                            window.location = "index.php"
+                          }else{
                             $("#errorMessage").html(json[0]);
+                          }
                         } else {
                             $("#errorMessage").html('');
                         }
@@ -147,7 +156,7 @@
 
 
     <!-- FOOTER -->
-    <footer class="customFooter">
+    <footer class="customFooter"  style="margin-top: 30em;">
       <div class="row justify-content-md-center">
         <div class="col-md-auto">
           <div class="d-flex flex-column align-items-center">
@@ -157,7 +166,7 @@
                     <a href="mailto:danseginmemorialgolf@gmail.com"><img src="images/icons/gmail.png" alt="Emai" width="60" height="60"/></a>
                     <a href="https://www.facebook.com/danseginmemorialgolf"><img src="images/icons/facebook.png" alt="Facebook" width="60" height="60"/></a>
                     <a href="https://www.instagram.com/dandseginmemorialgolf/?fbclid=IwAR18jpY5QWajdv2qD22snOqdFg9yY8u1v3NKgMBsPdCKKcG0i_VwxMs1JhA"><img src="images/icons/instagram.png" alt="Instagram" width="60" height="60"/></a>
-                    <a href="https://twitter.com/ddseginmemorialgolf?fbclid=IwAR1F73OqjgrOe_vMIIadhpUg82PvI5_XivgaN6U-w1LWB27fTJ3hmgEcYvI"><img src="images/icons/twitter.png" alt="Twitter" width="60" height="60"/></a>
+                    <a href="https://twitter.com/ddseginmemorial"><img src="images/icons/twitter.png" alt="Twitter" width="60" height="60"/></a>
                     <br/>
                                         
                 </figure>

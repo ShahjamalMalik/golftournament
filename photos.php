@@ -120,7 +120,7 @@
                       if($i == 0){
                         echo '<div class="carousel-item active">';
                         echo '<div class="form-group">';
-                        echo '<form method="POST" action="server/deletePicture.php" style="text-align:center" '.$hidden.'>';
+                        echo '<form method="POST" action="server/deletePicture.php" style="text-align:center" '.$_SESSION['adminHide'].'>';
                         echo '<button name="delete" value="'.$idArray[$i].'"> Delete Photo </button>';
                         echo '</form>';
                          echo '</div>';
@@ -130,7 +130,7 @@
                       }else{
                         echo '<div class="carousel-item ">';
                         echo '<div class="form-group">';
-                        echo '<form method="POST" action="server/deletePicture.php" style="text-align:center" '.$hidden.'>';
+                        echo '<form method="POST" action="server/deletePicture.php" style="text-align:center" '.$_SESSION['adminHide'].'>';
                         echo '<button name="delete" value="'.$idArray[$i].'"> Delete Photo </button>';
                         echo '</form>';
                          echo '</div>';
