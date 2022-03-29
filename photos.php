@@ -1,4 +1,15 @@
+<?php
+  session_start();
+  $hidden;
 
+ 
+  if($_SESSION['id'] == 1) {
+    $_SESSION['adminHide'] = '';
+    
+  } else {
+    $_SESSION['adminHide'] = 'hidden';
+  }
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -24,41 +35,43 @@
 	<body>
     <div>
         <div>
-            <nav class="navbar navbar-expand-lg">
-                <a class="navbar-brand" href="index.php"><img
-                    src="images/ddsm-logo.png"
-                    alt="ddsm-logo"
-                    width="100"
-                    height="50"/></a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                  <span class="navbar-toggler-icon icon-bar"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                  <ul class="navbar-nav">
-                    <li class="nav-item active">
-                      <a class="nav-link" href="registration.html">Registration <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="donate.html">Donate</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="photos.php">Photos</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="sponsors.php">Sponsors</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="store.html">Store</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="about.html">About</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="admin.php">Admin</a>
-                    </li>
-                  </ul>
-                </div>
-            </nav>
+        <nav class="navbar navbar-expand-lg">
+            <a class="navbar-brand" href="index.php"><img
+                src="images/ddsm-logo.png"
+                alt="ddsm-logo"
+                width="100"
+                height="50"/></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon icon-bar"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav">
+                <li class="nav-item active">
+                  <a class="nav-link" href="registration.php">Registration <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="donate.php">Donate</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="photos.php">Photos</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="sponsors.php">Sponsors</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="store.php">Store</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="about.php">About</a>
+                </li>
+                <?php 
+                  echo '<li class="nav-item">';
+                  echo  '<a '.$_SESSION['adminHide'].' class="nav-link" href="admin.php">Admin</a>';
+                  echo '</li>';
+                ?>
+              </ul>
+            </div>
+          </nav>
       
         </div>
         <div class="container">
