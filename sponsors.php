@@ -3,9 +3,12 @@
   $hidden;
 
  
-  if($_SESSION['id'] == 1) {
-    $_SESSION['adminHide'] = '';
-    
+  if(isset($_SESSION['id'])) {
+    if($_SESSION['id'] == 1){
+      $_SESSION['adminHide'] = '';
+    }else{
+      $_SESSION['adminHide'] = 'hidden';
+    }
   } else {
     $_SESSION['adminHide'] = 'hidden';
   }

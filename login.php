@@ -88,7 +88,7 @@
           <form action="server/login.php" method="POST" enctype="multipart/form-data">
                 <div class="form-group" style="background-color: white;">
                   <h5><label for="adminEmail">Email: </label></h5>
-                  <input type="text" name="adminEmail" id="adminEmail">
+                  <input type="email" name="adminEmail" id="adminEmail">
                   
                 </div>
                 <div class="form-group" style="background-color: white;">
