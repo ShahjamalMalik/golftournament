@@ -22,7 +22,7 @@ if(isset($_POST['delete'])){
         // use exec() because no results are returned
         $dbh->exec($sql);
         echo "Record deleted successfully";
-      } catch(PDOException $e) {
+    } catch(PDOException $e) {
         echo $sql . "<br>" . $e->getMessage();
     }
 

@@ -148,7 +148,7 @@
               <br>
               <h5 class="card-text"> Make a Donation Today!</h5>
               <br>
-              <a href="donate.html" class="btn btn-dark btn-lg hoverButton" style="background:black;"> Click Me</a>
+              <a href="donate.php" class="btn btn-dark btn-lg hoverButton" style="background:black;"> Click Me</a>
             </div>
           </div>
         </div>
@@ -193,7 +193,7 @@
               <br>
               <h5 class="card-text">12:00 PM SHOTGUN START</h5>
               <h6 class="card-text">Saturday June 4th 2022</h6>
-                <a href="registration.html" class="btn btn-dark btn-lg hoverButton" style="background:black;"> Click Me</a>
+                <a href="registration.php" class="btn btn-dark btn-lg hoverButton" style="background:black;"> Click Me</a>
             </div>
           </div>
         </div>
@@ -210,7 +210,7 @@
               <h4 class="card-title">Raffle Prizes Day &rarr;</h4>
               <h5 class="card-text">For More Information Please Click on the Button Bellow.</h5>
                 <br>
-                <a href="registration.html" class="btn btn-dark btn-lg hoverButton" style="background:black;"> Click Me</a>
+                <a href="registration.php" class="btn btn-dark btn-lg hoverButton" style="background:black;"> Click Me</a>
             </div>
           </div>
         </div>
@@ -240,7 +240,7 @@
               <br>
               <h5 class="card-text">BBQ Banquet Dinner</h5>
                 <br>
-                <a href="registration.html" class="btn btn-dark btn-lg hoverButton" style="background:black;"> Click Me</a>
+                <a href="registration.php" class="btn btn-dark btn-lg hoverButton" style="background:black;"> Click Me</a>
             </div>
           </div>
         </div>
@@ -258,7 +258,7 @@
               <h5 class="card-text">Thank You for Your Contribution</h5>
               <h6 class="card-text">Toward a Great Cause !</h6>
                 <br>
-                <a href="sponsors.html" class="btn btn-dark btn-lg hoverButton" style="background:black;"> Click Me</a>
+                <a href="donate.php" class="btn btn-dark btn-lg hoverButton" style="background:black;"> Click Me</a>
             </div>
           </div>
         </div>

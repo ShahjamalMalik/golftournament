@@ -5,14 +5,17 @@
    */
   session_start();
   /**
-   * If the session variable 'id' exists, check if it equals 1 (logged in as admin) to make sure the admin link on the navbar is visible, if not set it to hidden and redirect to index.php
+   * If the session variable 'id' exists, check if it equals 1 (logged in as admin) to make sure the admin link on the navbar is visible, if not set it to hidden
    */
-  if($_SESSION['id'] == 1) {
-    $_SESSION['adminHide'] = '';
-    
+
+  if(isset($_SESSION['id'])) {
+    if($_SESSION['id'] == 1){
+      $_SESSION['adminHide'] = '';
+    }else{
+      $_SESSION['adminHide'] = 'hidden';
+    }
   } else {
     $_SESSION['adminHide'] = 'hidden';
-    header("Location: index.php");
   }
 ?>
 

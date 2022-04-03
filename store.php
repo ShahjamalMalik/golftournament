@@ -1,13 +1,8 @@
 <?php
-  /**
-   * login.php is the login page for the admin
-   * start the session so we can access our session variables that are active in the session
-   */
   session_start();
-  /**
-   * If the session variable 'id' exists, check if it equals 1 (logged in as admin) to make sure the admin link on the navbar is visible, if not set it to hidden
-   */
+  $hidden;
 
+ 
   if(isset($_SESSION['id'])) {
     if($_SESSION['id'] == 1){
       $_SESSION['adminHide'] = '';
@@ -18,7 +13,6 @@
     $_SESSION['adminHide'] = 'hidden';
   }
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -34,15 +28,11 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
-
-    <!-- JQuery -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-
-		
 	</head>	
 	<body>
-    <div class="aboutPage">
-    <nav class="navbar navbar-expand-lg">
+    <div>
+        <div>
+        <nav class="navbar navbar-expand-lg">
             <a class="navbar-brand" href="index.php"><img
                 src="images/ddsm-logo.png"
                 alt="ddsm-logo"
@@ -72,102 +62,18 @@
                   <a class="nav-link" href="about.php">About</a>
                 </li>
                 <?php 
-                  /**
-                   * If the session variable is empty then the navlink for admin will show, if it is set to hidden it will be set to hidden in css and not show
-                   */
                   echo '<li class="nav-item">';
                   echo  '<a '.$_SESSION['adminHide'].' class="nav-link" href="admin.php">Admin</a>';
                   echo '</li>';
                 ?>
               </ul>
             </div>
-          </nav>
-    </div>
- 
-     <!-- Admin Page -->
-    <div class="d-flex justify-content-center mt-5 mb-5">
-      <div class="card" style="width: 52rem;">
-        <div class="card-header">
-          <h3>LOGIN</h3>
-        </div>
-        <ul class="list-group list-group-flush">
-          <li class="list-group-item">
-          <?php 
-            echo '<h3 '.$_SESSION['adminHide'].' >You already logged in </h3>';
-
-          ?>
-          <form action="server/login.php" method="POST" enctype="multipart/form-data">
-                <div class="form-group" style="background-color: white;">
-                  <h5><label for="adminEmail">Email: </label></h5>
-                  <input type="email" name="adminEmail" id="adminEmail">
-                  
-                </div>
-                <div class="form-group" style="background-color: white;">
-                  <h5><label for="adminPassword">Password: </label></h5>
-                  <input type="password" name="adminPassword" id="adminPassword">
-                  
-                </div>
-                <div id="errorMessage"></div>
-                <input id="submit" type="submit"class="btn btn-success" name="submit">
-              </form>
-          </li>
-        </ul>
+          </nav> 
       </div>
+        <div>Work in process</div>
     </div>
-    <script>
-        $(document).ready(function(){
-            $("#submit").click(function(){
-                var adminEmail = $("#adminEmail").val();
-                var adminPassword = $("#adminPassword").val();
-                var dataString = 'adminEmail='+ adminEmail + '&adminPassword='+ adminPassword;
-                if(adminEmail=='' || adminPassword=='') {
-                    if(adminEmail == '' && adminPassword=='') {
-                        $("#errorMessage").html("Please Fill Password And Email");
-                    } else {
-                        if(adminEmail=='') {
-                            $("#errorMessage").html("Please Fill Email");
-                        } else {
-                            $("#errorMessage").html("");
-                            if(adminPassword=='') {
-                                $("#errorMessage").html("Please Fill Password");
-                            } else {
-                                $("#errorMessage").html("");
-                            }
-                        }
-
-                    }
-
-                }
-                else {
-                    $.ajax({
-                    type: "POST",
-                    url: "server/login.php",
-                    data: dataString,
-                    dataType: "JSON",
-                    cache: false,
-                    success: function(json){
-                        
-                        if(json[0]) {
-                          if(json[0] == "SUCCESS"){
-                            $("#errorMessage").html("Logged in successfully");
-                            window.location = "index.php"
-                          }else{
-                            $("#errorMessage").html(json[0]);
-                          }
-                        } else {
-                            $("#errorMessage").html('');
-                        }
-                    }
-                    });
-                }
-                return false;
-            });
-        });
-    </script>
-
-
     <!-- FOOTER -->
-    <footer class="customFooter"  style="margin-top: 30em;">
+    <footer class="customFooter" style="margin-top: 55em;">
       <div class="row justify-content-md-center">
         <div class="col-md-auto">
           <div class="d-flex flex-column align-items-center">
@@ -185,11 +91,6 @@
         </div>
       </div>  
       <div class="row justify-content-md-center">
-    </footer>  
-    </div>
-
- 
-  </body>
+    </footer>
+    </body>
 </html>
-
-<?php
