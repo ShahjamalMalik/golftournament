@@ -1,59 +1,101 @@
 <?php
+/**
+ * addSponsor.php will be used to add a sponsor to the gallery on sponsors.php 
+ */
+
+/**
+ * Include the database configuration file
+ */
 include_once 'connect.php'; 
 
-
-
+/**
+ * sponsorName, sponsorDescription, and sponsorWebsite is the information we are receiving from the form.  
+ */
 $sponsorName = $_POST["sponsor"];
 $sponsorDescription = $_POST["sponsorDescription"];
 $sponsorWebsite = $_POST["sponsorWebsite"];
-
+/**
+ * Final thing to implement (error handling)
+ */
+$errorMessageAddSponsorReason;
+$errorMessageAddSponsor;
+/**
+ * Target directory files that we're going to use to do our checks.
+ */
 $target_dir = "../images/sponsors/";
+$target_file = $target_dir . basename($_FILES["sponsorLogo"]["name"]);
+/**
+ * Because this is in another directory than the home directory, the "send" variables are going to be what we actually use for the SQL statement 
+ */
 $send_target_dir = "images/sponsors/";
 $send_target_file = $send_target_dir . basename($_FILES["sponsorLogo"]["name"]);
-$target_file = $target_dir . basename($_FILES["sponsorLogo"]["name"]);
-echo $target_file;
+
+/**
+ * $uploadOk is a variable that will be used in the final if statement to see if the file was uploaded or not\
+ * $imageFileType is the variable that will let us know if this is an image or not
+ */
 $uploadOk = 1;
 $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
-// Check if image file is a actual image or fake image
+/**
+ * Check if image file is a actual image or fake image
+ * if a submit was had, if getimagesize doesn't return false then continue with the upload, if not don't.
+ */ 
 if(isset($_POST["submit"])) {
   $check = getimagesize($_FILES["sponsorLogo"]["tmp_name"]);
   if($check !== false) {
-    echo "File is an image - " . $check["mime"] . ".";
     $uploadOk = 1;
   } else {
-    echo "File is not an image.";
+    $errorMessageAddSponsorReason = "File is not an image.";
     $uploadOk = 0;
   }
 }
 
+/**
+ * If the file exists, don't upload 
+ */
 if (file_exists($target_file)) {
-    echo "Sorry, file already exists.";
-    $uploadOk = 0;
+    $errorMessageAddSponsorReason = "Sorry, file already exists.";
+    $uploadOk = 0;    
 }
 
-
+/**
+ * If imageFileType is not any of these extensions, don't upload. 
+ */
 if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
 && $imageFileType != "gif" ) {
-  echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
+  $errorMessageAddSponsorReason = "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
   $uploadOk = 0;
 }
 
-// Check if $uploadOk is set to 0 by an error
+
+/**
+ * We want to check if the upload checks have all passed, if not don't upload the file
+ */
 if ($uploadOk == 0) {
-    echo "Sorry, your file was not uploaded.";
-  // if everything is ok, try to upload file
+    $errorMessageAddSponsorReason = "Sorry, your file was not uploaded.";
+  /**
+   * If uploadOk is not equal to 1, upload the file
+   */
   } else {
+    /**
+     * This is what will put the file into the actual directory
+     */
     if (move_uploaded_file($_FILES["sponsorLogo"]["tmp_name"], $target_file)) {
-        echo "This is the target file ". $send_target_dir . " ";
+       /**
+        * This is the SQL statement that we will execute for the DB; insert image into the DB 
+        */
         $insert = "INSERT into sponsor_logos (file_path, sponsor_name, sponsor_description, sponsor_link) VALUES (?, ?, ?, ?)";
         $stmt = $dbh->prepare($insert);
         $stmt->execute([$send_target_file, $sponsorName, $sponsorDescription, $sponsorWebsite]);
 
         
-      // Insert image file name into database
+      
       
     } else {
-        echo "Sorry, there was an error uploading your file.";
+      /**
+       * If move_uploaded_file($_FILES["sponsorLogo"]["tmp_name"], $target_file) is false
+       */
+      $errorMessageAddSponsorReason = "Sorry, there was an error uploading your file.";
     }
 }
 

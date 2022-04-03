@@ -1,8 +1,12 @@
 <?php
+  /**
+   * login.php is the login page for the admin
+   * start the session so we can access our session variables that are active in the session
+   */
   session_start();
-  $hidden;
-
- 
+  /**
+   * If the session variable 'id' exists, check if it equals 1 (logged in as admin) to make sure the admin link on the navbar is visible, if not set it to hidden
+   */ 
   if($_SESSION['id'] == 1) {
     $_SESSION['adminHide'] = '';
     
@@ -64,6 +68,9 @@
                   <a class="nav-link" href="about.php">About</a>
                 </li>
                 <?php 
+                  /**
+                   * If the session variable is empty then the navlink for admin will show, if it is set to hidden it will be set to hidden in css and not show
+                   */
                   echo '<li class="nav-item">';
                   echo  '<a '.$_SESSION['adminHide'].' class="nav-link" href="admin.php">Admin</a>';
                   echo '</li>';

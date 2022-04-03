@@ -1,7 +1,12 @@
 <?php
+  /**
+   * registration.php is the registration page for the tournament
+   * start the session so we can access our session variables that are active in the session
+   */
   session_start();
-  $hidden;
-
+  /**
+   * If the session variable 'id' exists, check if it equals 1 (logged in as admin) to make sure the admin link on the navbar is visible, if not set it to hidden
+   */
   if(isset($_SESSION['id'])) {
     if($_SESSION['id'] == 1){
       $_SESSION['adminHide'] = '';

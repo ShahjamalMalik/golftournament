@@ -1,4 +1,10 @@
 <?php 
+    /**
+     * register.php will be used to register as the admin
+     * session_start() needs to be used for us to use session variables
+     * $errorArray will be used to pass error messages to JS/jQuery 
+     * Include the database configuration file 
+     */
     session_start();
     $errorArray = [];
     include_once 'connect.php'; 

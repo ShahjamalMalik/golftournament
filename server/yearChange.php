@@ -1,17 +1,22 @@
 <?php
+/**
+ * yearChange.php will be used to change the year on index.php
+ * Include the database configuration file
+ */
 include_once 'connect.php'; 
 
+
+/**
+ * If post submit, get the information from the POST. Then insert that into the database
+ * $selected is the information from the POST form/list 
+ * 
+ */
 if(isset($_POST['submit'])){
     
         $selected = $_POST['selectYear'];
-        echo 'You have chosen: ' . $selected;
         $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         $sql = 'INSERT INTO years (year_number) VALUES ("'.$selected.'")';
         try {
-    
-            // sql to delete a record
-    
-            // use exec() because no results are returned
             $dbh->exec($sql);
             echo "Record added successfully";
           } catch(PDOException $e) {
