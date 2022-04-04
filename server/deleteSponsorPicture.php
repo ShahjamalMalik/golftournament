@@ -8,10 +8,11 @@
 include_once 'connect.php'; 
 
     
-    //$fileName = '../' . $filePath;
-    //echo $filePath;
+
 /**
  * Same as deletePicture.php but instead it'll be the sponsor_id being used for the query
+ * However for this we will be doing another SQL statement to get the file_path back using the id we got from the form. 
+ * Once we get that file, in regards to where the server folder is located we create $PathToFileToDelete and then do an unlink using that variable
  */
 if(isset($_POST['delete'])){ 
     
