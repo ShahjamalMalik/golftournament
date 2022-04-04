@@ -1,6 +1,6 @@
 <?php
 /**
- * addSponsor.php will be used to add a sponsor to the gallery on sponsors.php 
+ * addDescription.php will be used to add or change description of a photo
  */
 
 /**

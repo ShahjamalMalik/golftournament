@@ -184,6 +184,7 @@
       </div>
     </div>
     <script>
+       // Handle submit 
         $(document).ready(function(){
             $("#submit").click(function(){
               var description = $('textarea#addPicDescription').val();
