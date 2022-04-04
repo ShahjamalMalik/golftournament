@@ -143,33 +143,33 @@
                         if($i == 0){                           
                             echo '<h1></h1>';
                             echo '<div class="carousel-item active">';
-                            echo '<div class="col align-self-center" style="border: 2px solid black;border-radius: 30px;">';
-                              echo '<h4>Sponsor Name: '.$pathsName[$i].'</h4>';                    
-                              echo '<h4 "'.$hiddenDescription.'">Description: '.trim($pathsDescription[$i], '"').'</h4>';
-                              echo '<a  "'.$hiddenLink.'" href="'.$pathsLink[$i].'"><h4>Website Link: '.$pathsLink[$i].'</h4></a>';
+                            echo '<div class="col align-self-center" style="border-bottom: 2.5px solid black; border-top: 2.5px solid black;">';
+                            echo '<h3 style="text-align:center">'.$pathsName[$i].'</h3>';                    
+                            echo '<h5 "'.$hiddenDescription.'">'.trim($pathsDescription[$i], '"').'</h5>';
+                            echo '<a  "'.$hiddenLink.'" href="'.$pathsLink[$i].'"><h5 style="text-align:center" class="mt-5">Visit '.$pathsName[$i].'</h5> </a>';
                             echo '</div>';
-                            echo '<div class="form-group">';
-                            echo '<form method="POST" action="server/deleteSponsorPicture.php" style="text-align:center" '.$_SESSION['adminHide'].'>';
-                            echo '<button name="delete" value="'.$idArray[$i].'"> Delete Sponsor</button>';
-                            echo '</form>';
+                            echo '<div class="form-group mt-5">';
                             echo '</div>';
                             echo '<img class="d-block w-100 h-auto" src="'.$paths[$i].'"/>';
+                            echo '<form method="POST" action="server/deleteSponsorPicture.php" style="text-align:center" '.$_SESSION['adminHide'].'>';
+                            echo '<button class="btn btn-danger mt-5 mb-5" name="delete" value="'.$idArray[$i].'"> Delete Sponsor</button>';
+                            echo '</form>';
                             echo '</div>';
                             
                         }else{
                             
                             echo '<div class="carousel-item ">';
-                            echo '<div class="col align-self-center" style="border: 2px solid black;border-radius: 30px;">';
-                              echo '<h4>Sponsor Name: '.$pathsName[$i].'</h4>';
-                              echo '<h4 "'.$hiddenDescription.'">Description: '.trim($pathsDescription[$i], '"').'</h4>';
-                              echo '<a  "'.$hiddenLink.'" href="'.$pathsLink[$i].'"><h4>Website Link: '.$pathsLink[$i].'</h4></a>';
+                            echo '<div class="col align-self-center" style="border-bottom: 2.5px solid black; border-top: 2.5px solid black;">';
+                            echo '<h3 style="text-align:center">'.$pathsName[$i].'</h3>';                    
+                            echo '<h5 "'.$hiddenDescription.'">'.trim($pathsDescription[$i], '"').'</h5>';
+                            echo '<a  "'.$hiddenLink.'" href="'.$pathsLink[$i].'"><h5 style="text-align:center" class="mt-5">Visit '.$pathsName[$i].'</h5> </a>';
                             echo '</div>';
-                            echo '<div class="form-group">';
-                            echo '<form method="POST" action="server/deleteSponsorPicture.php" style="text-align:center" '.$_SESSION['adminHide'].'>';
-                            echo '<button name="delete" value="'.$idArray[$i].'"> Delete Sponsor </button>';
-                            echo '</form>';
+                            echo '<div class="form-group mt-5">';
                             echo '</div>';
                             echo '<img class="d-block w-100  h-auto" src="'.$paths[$i].'"/>';
+                            echo '<form method="POST" action="server/deleteSponsorPicture.php" style="text-align:center" '.$_SESSION['adminHide'].'>';
+                            echo '<button class="btn btn-danger mt-5 mb-5" name="delete" value="'.$idArray[$i].'"> Delete Sponsor</button>';
+                            echo '</form>';
                             echo '</div>';
                         }                 
                         $i +=1;

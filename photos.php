@@ -10,11 +10,15 @@
   if(isset($_SESSION['id'])) {
     if($_SESSION['id'] == 1){
       $_SESSION['adminHide'] = '';
+      $_SESSION['showText'] = 'hidden';
+
     }else{
       $_SESSION['adminHide'] = 'hidden';
+      $_SESSION['showText'] = '';
     }
   } else {
     $_SESSION['adminHide'] = 'hidden';
+    $_SESSION['showText'] = '';
   }
 ?>
 
@@ -89,6 +93,7 @@
             <?php 
               $path;
               $paths = [];
+              $descriptions = [];
               $idArray = [];
               $counter = 0;
               $admin = true;
@@ -106,6 +111,7 @@
                     $paths[$counter] = $row['picture_path'];
                     $id = $row['picture_id'];
                     $idArray[$counter] = $id;
+                    $descriptions[$counter] = $row['picture_description'];
                     echo '<img src="'.$path.'" data-target="#indicators" data-slide-to="'.$counter.'">';
                     echo '</div>';
                     $counter += 1;
@@ -131,21 +137,33 @@
                         echo '<div class="carousel-item active">';
                         echo '<div class="form-group">';
                         echo '<form method="POST" action="server/deletePicture.php" style="text-align:center" '.$_SESSION['adminHide'].'>';
-                        echo '<button name="delete" value="'.$idArray[$i].'"> Delete Photo </button>';
+                        echo '<button class="btn btn-danger" name="delete" value="'.$idArray[$i].'"> Delete Photo </button>';
                         echo '</form>';
                          echo '</div>';
                         echo '<img class="d-block w-100 h-auto" src="'.$paths[$i].'"/>';
-                        echo '<h1>Description</h1>';
+                        echo '<h1 style="text-align:center">Description</h1>';
+                        echo '<p '.$_SESSION['showText'].' class="ml-5">'.$descriptions[$i].'</p>';
+                        echo '<form method="POST" action="server/addDescription.php" style="text-align:center" '.$_SESSION['adminHide'].'>';
+                        echo '<textarea rows="8"  cols="55" id="addPicDescription" name="addPicDescription">'.$descriptions[$i].'</textarea>';
+                        echo '<button class="btn btn-success mb-5 mt-5 btn-lg" id="submit" type="submit" name="add" value="'.$idArray[$i].'">Save</button>';
+                        echo '</form>';
+                        echo '<p class="text-primary mb-5" id="message"></p> ';
                         echo '</div>';
                       }else{
                         echo '<div class="carousel-item ">';
                         echo '<div class="form-group">';
                         echo '<form method="POST" action="server/deletePicture.php" style="text-align:center" '.$_SESSION['adminHide'].'>';
-                        echo '<button name="delete" value="'.$idArray[$i].'"> Delete Photo </button>';
+                        echo '<button class="btn btn-success" name="delete" value="'.$idArray[$i].'"> Delete Photo </button>';
                         echo '</form>';
                          echo '</div>';
                         echo '<img class="d-block w-100  h-auto" src="'.$paths[$i].'"/>';
-                        echo '<h1>Description</h1>';
+                        echo '<h1 style="text-align:center">Description</h1>';
+                        echo '<p '.$_SESSION['showText'].' class="ml-5">'.$descriptions[$i].'</p>';
+                        echo '<form method="POST" action="server/addDescription.php" style="text-align:center" '.$_SESSION['adminHide'].'>';
+                        echo '<textarea rows="8"  cols="55" id="addPicDescription" name="addPicDescription">'.$descriptions[$i].'</textarea>';
+                        echo '<button class="btn btn-success mb-5 mt-5 btn-lg" id="submit" type="submit" name="add" value="'.$idArray[$i].'">Save</button>';
+                        echo '</form>';
+                        echo '<p class="text-primary mb-5" id="message"></p> ';
                         echo '</div>';
                       }                 
                       $i +=1;
@@ -165,6 +183,35 @@
         </div>
       </div>
     </div>
+    <script>
+        $(document).ready(function(){
+            $("#submit").click(function(){
+              var description = $('textarea#addPicDescription').val();
+              var id = $('#add').val();
+              var dataString = 'addPicDescription='+ description;
+
+              $.ajax({
+                    type: "POST",
+                    url: "server/addDescription.php",
+                    data: dataString,
+                    dataType: "JSON",
+                    cache: false,
+                    success: function(json){
+                        if(json[0] == "SUCCESS") {
+                            $("#errorMessage").html(json[0]);
+
+                        } else {
+                            $("#errorMessage").html(json[0]);
+                        }
+                    }
+                    
+              });
+              return false;                        
+
+            });
+        });
+    </script>
+    
     <!-- FOOTER -->
     <footer class="customFooter" style="margin-top: 40em;">
       <div class="row justify-content-md-center">

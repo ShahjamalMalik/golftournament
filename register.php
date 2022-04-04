@@ -93,18 +93,18 @@
         </div>
         <ul class="list-group list-group-flush">
           <li class="list-group-item">
-            <form action="server/login.php" method="POST" enctype="multipart/form-data">
+            <form action="server/register.php" method="POST" enctype="multipart/form-data">
                 <div class="form-group" style="background-color: white;">
                   <h5><label for="adminEmail">Email: </label></h5>
-                  <input type="email" name="adminEmail" id="adminEmail">
+                  <input type="email" value="" name="adminEmail" id="adminEmail" required>
                   
                 </div>
                 <div class="form-group" style="background-color: white;">
                   <h5><label for="adminPassword">Password: </label></h5>
-                  <input type="password" name="adminPassword" id="adminPassword">
+                  <input type="password" value=""  name="adminPassword" id="adminPassword" required>
                   
                 </div>
-                <div id="errorMessage"></div>
+                <div class="text-primary mb-5" id="errorMessage"></div>
                 <input id="submit" type="submit"class="btn btn-success" name="submit">
               </form>
           </li>
@@ -135,6 +135,10 @@
 
                 }
                 else {
+                  var testEmail = /^[A-Z0-9._%+-]+@([A-Z0-9-]+\.)+[A-Z]{2,4}$/i;
+                  if(!testEmail.test(adminEmail)){
+                    $("#errorMessage").html("Please enter a valid email address");
+                  }else{
                     $.ajax({
                     type: "POST",
                     url: "server/register.php",
@@ -142,14 +146,17 @@
                     dataType: "JSON",
                     cache: false,
                     success: function(json){
-                        
-                        if(json[0]) {
+                        if(json[0] == "SUCCESS") {
                             $("#errorMessage").html(json[0]);
+
                         } else {
-                            $("#errorMessage").html('');
+                            $("#errorMessage").html(json[0]);
                         }
                     }
                     });
+
+                  }
+
                 }
                 return false;
             });
@@ -158,7 +165,7 @@
 
 
     <!-- FOOTER -->
-    <footer class="customFooter">
+    <footer class="customFooter" style="margin-top: 25em;">
       <div class="row justify-content-md-center">
         <div class="col-md-auto">
           <div class="d-flex flex-column align-items-center">

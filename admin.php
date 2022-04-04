@@ -151,12 +151,12 @@ if(isset($_SESSION['id'])) {
                   <h5><label for="sponsorLogo">Upload Sponsor Logo: </label></h5>
                   <input type="file" name="sponsorLogo" id="sponsorLogo">
                 </div>
-                <input type="submit"class="btn btn-success" name="submit">
+                <input type="submit"class="btn btn-success mt-5" name="submit">
               </form>
           </li>
-          <li class="list-group-item">
+          <li class="list-group-item pt-5">
             <form action="server/logout.php" method="POST" enctype="multipart/form-data">
-              <input type="submit"class="btn btn-success" value="Logout" name="submit">
+              <input type="submit"class="btn btn-dark btn-lg" value="Logout" name="submit">
             </form>
           </li>
         </ul>
