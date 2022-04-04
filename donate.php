@@ -124,7 +124,7 @@
             <h5 class="customContactRegistration">For more information, please contact: </h5>
           </div>
           <div class="d-flex justify-content-center">
-            <p><img src="images/icons/icons8-send-email.png"/> <a href="mailto:danseginmemorialgolf@gmail.com">danseginmemorialgolf@gmail.com</a></p>
+            <p><img src="images/icons/icons8-send-email.png"/> <a href="mailto:danasegin@ddsmemorial.ca">danasegin@ddsmemorial.ca</a></p>
           </div>        
       </div>
             <script>
@@ -171,7 +171,7 @@
           <br/>
           <h2 class="mb-4">Follow us</h2>
               <figure>
-                    <a href="mailto:danseginmemorialgolf@gmail.com"><img src="images/icons/gmail.png" alt="Emai" width="60" height="60"/></a>
+                    <a href="mailto:danasegin@ddsmemorial.ca"><img src="images/icons/gmail.png" alt="Emai" width="60" height="60"/></a>
                     <a href="https://www.facebook.com/danseginmemorialgolf"><img src="images/icons/facebook.png" alt="Facebook" width="60" height="60"/></a>
                     <a href="https://www.instagram.com/dandseginmemorialgolf/?fbclid=IwAR18jpY5QWajdv2qD22snOqdFg9yY8u1v3NKgMBsPdCKKcG0i_VwxMs1JhA"><img src="images/icons/instagram.png" alt="Instagram" width="60" height="60"/></a>
                     <a href="https://twitter.com/ddseginmemorial"><img src="images/icons/twitter.png" alt="Twitter" width="60" height="60"/></a>
