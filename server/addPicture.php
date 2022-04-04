@@ -9,7 +9,7 @@
 include_once 'connect.php'; 
 
 /**
- * $dateTime is a variable that will be the current date
+ * $dateTime is a variable that will be the current date and will be used for DB information
  */
 $dateTime = date("Y/m/d");
 if(isset($_POST['submit'])){ 

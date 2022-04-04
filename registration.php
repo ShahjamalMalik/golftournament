@@ -69,6 +69,9 @@
                   <a class="nav-link" href="about.php">About</a>
                 </li>
                 <?php 
+                  /**
+                   * If the session variable is empty then the navlink for admin will show, if it is set to hidden it will be set to hidden in css and not show
+                   */
                   echo '<li class="nav-item">';
                   echo  '<a '.$_SESSION['adminHide'].' class="nav-link" href="admin.php">Admin</a>';
                   echo '</li>';
