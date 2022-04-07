@@ -153,7 +153,7 @@
                         echo '<div class="carousel-item ">';
                         echo '<div class="form-group">';
                         echo '<form method="POST" action="server/deletePicture.php" style="text-align:center" '.$_SESSION['adminHide'].'>';
-                        echo '<button class="btn btn-success" name="delete" value="'.$idArray[$i].'"> Delete Photo </button>';
+                        echo '<button class="btn btn-danger" name="delete" value="'.$idArray[$i].'"> Delete Photo </button>';
                         echo '</form>';
                          echo '</div>';
                         echo '<img class="d-block w-100  h-auto" src="'.$paths[$i].'"/>';
