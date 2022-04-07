@@ -1,5 +1,16 @@
 <?php
   /**
+   * Group 28 
+   * Mingi Kang (000818677)
+   * Shahjamal Malik(000367974)
+   * Ngoc Linh Nguyen(000800045)
+   * 
+   * Project Name: Charity Golf Tournament Website
+   * Client: The website is developed for Dana Segin from Heart & Stroke Foundation
+   * 
+   */
+
+  /**
    * index.php is the homepage
    * start the session so we can access our session variables that are active in the session
    */
