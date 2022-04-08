@@ -150,7 +150,7 @@
                             echo '</div>';
                             echo '<div class="form-group mt-5">';
                             echo '</div>';
-                            echo '<img class="d-block w-100 h-auto" src="'.$paths[$i].'"/>';
+                            echo '<img class="d-block w-100 h-auto mb-5" src="'.$paths[$i].'"/>';
                             echo '<form method="POST" action="server/deleteSponsorPicture.php" style="text-align:center" '.$_SESSION['adminHide'].'>';
                             echo '<button class="btn btn-danger mt-5 mb-5" name="delete" value="'.$idArray[$i].'"> Delete Sponsor</button>';
                             echo '</form>';
@@ -166,7 +166,7 @@
                             echo '</div>';
                             echo '<div class="form-group mt-5">';
                             echo '</div>';
-                            echo '<img class="d-block w-100  h-auto" src="'.$paths[$i].'"/>';
+                            echo '<img class="d-block w-100  h-auto mb-5" src="'.$paths[$i].'"/>';
                             echo '<form method="POST" action="server/deleteSponsorPicture.php" style="text-align:center" '.$_SESSION['adminHide'].'>';
                             echo '<button class="btn btn-danger mt-5 mb-5" name="delete" value="'.$idArray[$i].'"> Delete Sponsor</button>';
                             echo '</form>';
