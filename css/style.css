@@ -240,6 +240,11 @@ a.nav-link:hover {
   opacity: 1;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
+/* Style logos and images when pop up */
+.carousel-item-next, .carousel-item-prev, .carousel-item.active{
+  display: block;
+  padding: 1.8em;
+}
 
  
  /* =========== */
@@ -298,7 +303,9 @@ a.nav-link:hover {
     width: 100%;
   }
   
-	
+  .sponsorDescription{
+    font-size: 1.1rem;
+  }
 }
 
 @media screen and (min-width : 540px) and (max-width : 1024px){

@@ -145,7 +145,7 @@
                             echo '<div class="carousel-item active">';
                             echo '<div class="col align-self-center" style="border-bottom: 2.5px solid black; border-top: 2.5px solid black;">';
                             echo '<h3 style="text-align:center">'.$pathsName[$i].'</h3>';                    
-                            echo '<h5 "'.$hiddenDescription.'">'.trim($pathsDescription[$i], '"').'</h5>';
+                            echo '<h5 class="sponsorDescription" "'.$hiddenDescription.'">'.trim($pathsDescription[$i], '"').'</h5>';
                             echo '<a  "'.$hiddenLink.'" href="'.$pathsLink[$i].'"><h5 style="text-align:center" class="mt-5">Visit '.$pathsName[$i].'</h5> </a>';
                             echo '</div>';
                             echo '<div class="form-group mt-5">';
@@ -161,7 +161,7 @@
                             echo '<div class="carousel-item ">';
                             echo '<div class="col align-self-center" style="border-bottom: 2.5px solid black; border-top: 2.5px solid black;">';
                             echo '<h3 style="text-align:center">'.$pathsName[$i].'</h3>';                    
-                            echo '<h5 "'.$hiddenDescription.'">'.trim($pathsDescription[$i], '"').'</h5>';
+                            echo '<h5 class="sponsorDescription" "'.$hiddenDescription.'">'.trim($pathsDescription[$i], '"').'</h5>';
                             echo '<a  "'.$hiddenLink.'" href="'.$pathsLink[$i].'"><h5 style="text-align:center" class="mt-5">Visit '.$pathsName[$i].'</h5> </a>';
                             echo '</div>';
                             echo '<div class="form-group mt-5">';
