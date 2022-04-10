@@ -31,7 +31,7 @@ if(isset($_SESSION['id'])) {
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
@@ -103,7 +103,7 @@ if(isset($_SESSION['id'])) {
                     <h5>Select Image Files to Upload:</h5>
                   </div>
                   <div class="form-group" style="background-color: white;">
-                    <input type="file" name="files[]" multiple >
+                    <input required type="file" name="files[]" multiple >
                   </div>
                   <div class="form-group mt-5" style="background-color: white;">
                     <input type="submit" class="btn btn-success" name="submit" value="UPLOAD">
@@ -149,9 +149,10 @@ if(isset($_SESSION['id'])) {
                 </div>
                 <div class="form-group" style="background-color: white;">
                   <h5><label for="sponsorLogo">Upload Sponsor Logo: </label></h5>
-                  <input type="file" name="sponsorLogo" id="sponsorLogo">
+                  <input required type="file" name="sponsorLogo" id="sponsorLogo">
                 </div>
-                <input type="submit"class="btn btn-success mt-5" name="submit">
+                <div class="text-primary mb-5" id="errorMessageSponsor"></div>
+                <input type="submit"class="btn btn-success mt-5" id="submitSponsor" name="submitSponsor">
               </form>
           </li>
           <li class="list-group-item pt-5">
@@ -165,6 +166,37 @@ if(isset($_SESSION['id'])) {
 
     </div>'
  ?>
+ <script>
+   $(document).ready(function(){
+      $("#submitSponsor").click(function(e){
+        var sponsorName = $("#sponsor").val();
+        var sponsorDescription = $("#sponsorDescription").val();
+        var sponsorWebsite = $("#sponsorWebsite").val();
+        var sponsorLogo = $("#sponsorLogo").val();
+        console.log(sponsorLogo);
+        var dataString = 'sponsorName='+ sponsorName + '&sponsorDescription='+ sponsorDescription + '&sponsorWebsite='+ sponsorDescription + '&sponsorLogo=' + sponsorLogo;
+        e.preventDefault();
+        $.ajax({
+            type: "POST",
+            url: "server/addSponsor.php",
+            data: dataString,
+            dataType: "JSON",
+            cache: false,
+            success: function(json){
+                //console.log("hello");
+                console.log(json[0]);
+            }
+        });
+        return false;
+        
+        //var dataString = 'adminEmail='+ adminEmail + '&adminPassword='+ adminPassword;
+
+          
+          
+      });
+   });
+ </script>
+
 
     <!-- FOOTER -->
     <footer class="customFooter">

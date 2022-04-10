@@ -109,11 +109,12 @@
           //$row=$count->fetchAll();
           print_r($dbo->errorInfo()); 
       }
-      $year_number = $year_number . "  ANNUAL ONTARIO CENTRAL WEST & NORTH REGIONS";
+      $year_number = $year_number . "  Annual Dan D. Segin Golf for Heart Tournament";
     ?>
     <div class="row">
       <div  class="container-fluid b-g">
         <h1 class="h1bg"><?php echo $year_number ?></h1>
+        <h1 class="h3bg">(Supporting the Ontario Central, West & North Regions)</h1>
         <div class="textBg">
           <a><img class="golflogo"
             src="images/ddsm-logo.png"
@@ -122,7 +123,7 @@
             height="120"/></a>
             <div class="row">
               <div class="col-md-12 text-center">
-                <p class="animate-charcter"> Dan D Segin Memorial Golf for Heart Tournament</p>
+                <p class="animate-charcter"> Saturday, June 4th, 2022 <br> Flamborough Hills Golf Club</p>
               </div>
             </div>
             <div>

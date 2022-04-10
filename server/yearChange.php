@@ -27,7 +27,7 @@ if(isset($_POST['submit'])){
         if($sql3->execute()) {
             $row = $sql3->fetch(PDO::FETCH_OBJ);
             $year_number = $row->year_number;
-            echo $year_number;
+            //echo $year_number;
         } else{
             //$row=$count->fetchAll();
             print_r($dbo->errorInfo()); 

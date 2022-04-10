@@ -18,6 +18,7 @@ $sponsorWebsite = $_POST["sponsorWebsite"];
  * Final thing to implement (error handling)
  */
 $errorMessageAddSponsorReason;
+$errorArray = [];
 
 /**
  * Target directory files that we're going to use to do our checks.
@@ -46,7 +47,8 @@ if(isset($_POST["submit"])) {
     $uploadOk = 1;
   } else {
     $errorMessageAddSponsorReason = "File is not an image.";
-    echo $errorMessageAddSponsorReason;
+    array_push($errorArray, $errorMessageAddSponsorReason);
+    echo json_encode($errorArray);
     $uploadOk = 0;
   }
 }
@@ -56,7 +58,8 @@ if(isset($_POST["submit"])) {
  */
 if (file_exists($target_file)) {
     $errorMessageAddSponsorReason = "Sorry, file already exists.";
-    echo $errorMessageAddSponsorReason;
+    array_push($errorArray, $errorMessageAddSponsorReason);
+    echo json_encode($errorArray);
     $uploadOk = 0;    
 }
 
@@ -66,7 +69,8 @@ if (file_exists($target_file)) {
 if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
 && $imageFileType != "gif" ) {
   $errorMessageAddSponsorReason = "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
-  echo $errorMessageAddSponsorReason;
+  array_push($errorArray, $errorMessageAddSponsorReason);
+  echo json_encode($errorArray);
   $uploadOk = 0;
 }
 
@@ -76,7 +80,8 @@ if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg
  */
 if ($uploadOk == 0) {
     $errorMessageAddSponsorReason = "Sorry, your file was not uploaded.";
-    echo $errorMessageAddSponsorReason;
+    array_push($errorArray, $errorMessageAddSponsorReason);
+    echo json_encode($errorArray);
   /**
    * If uploadOk is not equal to 1, upload the file
    */
@@ -100,9 +105,11 @@ if ($uploadOk == 0) {
        * If move_uploaded_file($_FILES["sponsorLogo"]["tmp_name"], $target_file) is false
        */
       $errorMessageAddSponsorReason = "Sorry, there was an error uploading your file.";
-      echo $errorMessageAddSponsorReason;
+      //echo $errorMessageAddSponsorReason;
+      array_push($errorArray, $errorMessageAddSponsorReason);
+      echo json_encode($errorArray);
     }
 }
 
 
-header("Location: ../sponsors.php");
+//header("Location: ../sponsors.php");
