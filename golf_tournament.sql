@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 07, 2022 at 10:46 PM
+-- Generation Time: Apr 11, 2022 at 01:45 AM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 7.4.27
 
@@ -99,8 +99,13 @@ CREATE TABLE `sponsor_logos` (
 --
 
 INSERT INTO `sponsor_logos` (`sponsor_id`, `sponsor_name`, `file_path`, `sponsor_description`, `sponsor_link`) VALUES
-(29, 'Amazon', 'images/sponsors/amazon_logo.png', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.', 'https://www.amazon.ca/'),
-(30, 'Boston Pizza', 'images/sponsors/Boston_pizza.png', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ', 'https://bostonpizza.com/en/index.html');
+(34, 'Perfect Living Homes', 'images/sponsors/thumbnail_Logo-Blac.png', 'All our services are guaranteed!! Our goal is always to exceed your expectations and make your home selling or buying experience seamless. We do it all, we offer the convenience of one stop shopping at its finest. - Your Personal Real Estate Concierge! We take care of our clients every need, from start to finish', 'https://perfectlivinghomes.com/'),
+(35, 'Routes Transport', 'images/sponsors/image004.png', 'For over 20 years, Routes has successfully managed client and vendor relationships by placing integrity, innovation, culture and process first while delivering the highest level of service and cost effective solutions', 'https://routestransport.com/'),
+(36, 'Barra Fion', 'images/sponsors/Barra-Fion-Logo-2-2.jpg', 'Barra Fíon Tapas & Barrel opened our doors in July 2015. We at Barra believe that every great beverage deserves to be paired with an equally beautiful culinary experience. Our Spanish and tapas inspired menu is ever evolving, and our focus to maintain a fresh, natural, from-scratch menu is what we believe separates us from the rest', 'https://www.barrafion.ca/'),
+(37, 'Gator Ted\'s', 'images/sponsors/Gator Teds New Logo.jpg', 'Gator Ted\'s is North Burlington\'s premium sports and entertainment complex!! A Burlington Tradition since 1994 is getting bigger and better!! Featuring 50 Plasma TV\'s, 6 - 103\" Projector Screens and 12 Satellite feeds.  Join us every Friday for Live Entertainment...just look at the entertainment schedule to see who\'s playing.', 'https://www.gatorteds.ca/'),
+(38, 'Flamborough Hills ', 'images/sponsors/thumbnail_FH-FullLogo-Reduced-Colour.png', 'The origin of Flamborough Hills Golf Club goes back to 1961 when Jack and Ann Windsor shaped 18 Championship holes out of a dairy farm in the quiet hamlet of Copetown, Ontario. The Club opened for play under the name of Windsor Park and remained that way until a change of ownership in 1985 brought about the current name', 'https://flamboroughhills.com/'),
+(39, 'QB\'s Sports', 'images/sponsors/thumbnail_qblogo-logo.png', 'QB Sports Bar Grill Games is a family friendly sports bar, game center and restaurant. Adult and kid’s sports teams are welcome. Enjoy our game room, free Wi-Fi and pay-per-view events including UFC, NHL, NFL, NBA, MLB, MLS. Join us for delicious food, your favorite sporting events and games for the family. Offering inside dining in the restaurant or bar areas, patio, takeout and delivery', 'https://www.qbsports.com/'),
+(40, 'Judge & Jury', 'images/sponsors/thumbnail_Judge-and-Jury-Logo-220x148.png', 'In August of 1998 a couple of local Burlington guys thought that a good British Pub would be welcomed in the north end of Burlington. Twenty years later the Judge & Jury buzzes with life. Welcoming our friends and customers with great food, fresh draught and terrific wines', 'https://www.thejudgeandjury.ca/');
 
 -- --------------------------------------------------------
 
@@ -190,7 +195,7 @@ ALTER TABLE `images`
 -- AUTO_INCREMENT for table `sponsor_logos`
 --
 ALTER TABLE `sponsor_logos`
-  MODIFY `sponsor_id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
+  MODIFY `sponsor_id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=41;
 
 --
 -- AUTO_INCREMENT for table `years`

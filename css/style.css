@@ -1,4 +1,3 @@
-
 html,
 body {
   padding: 0;
@@ -56,14 +55,14 @@ a.nav-link:hover {
 
 .h1bg{
     color:white;
-    margin-top: 4.8em;
+    margin-top: 3em;
     text-align: center;
     font-family: "Roboto Slab", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
 .h3bg {
   color:white;
-  margin-top: 2em;
+  margin-top: 1em;
   text-align: center;
   font-family: "Roboto Slab", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 
@@ -75,11 +74,11 @@ a.nav-link:hover {
 
 .animate-charcter
 {
-    margin-top: 1.5em;
-    margin-bottom: 2rem;
+    margin-top: 1em;
+    margin-bottom: 0.5rem;
     color:white;
-    font-size: 3.25rem;
-    font-weight: 700;
+    font-size: 3rem;
+    font-weight: 650;
     line-height: 3.25rem;  
     font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
@@ -261,6 +260,9 @@ a.nav-link:hover {
   .h1bg{
       font-size: 23px;
   }
+  .h3bg{
+    font-size: 20px;
+  }
   
   .golflogo{
     width: 80;
@@ -319,7 +321,9 @@ a.nav-link:hover {
 @media screen and (min-width : 540px) and (max-width : 1024px){
   .h1bg{
     font-size: 32px;
-    
+  }
+  .h3bg{
+    font-size: 28px;
   }
 	a.nav-link{
 		text-align: center;
