@@ -137,19 +137,19 @@ if(isset($_SESSION['id'])) {
             <form action="server/addSponsor.php" method="POST" enctype="multipart/form-data">
                 <div class="form-group" style="background-color: white;">
                   <h5><label for="sponsor">Sponsor Name: </label></h5>
-                  <input required type="text" name="sponsor" id="sponsor">
+                  <input required type="text" name="sponsor" id="sponsor" required>
                 </div>
                 <div class="form-group" style="background-color: white;">
                   <h5><label for="sponsorDescription">Sponsor Description: </label></h5>
-                  <input type="text" name="sponsorDescription" id="sponsorDescription">
+                  <input type="text" name="sponsorDescription" id="sponsorDescription" required>
                 </div>
                 <div class="form-group" style="background-color: white;">
                   <h5><label for="sponsorWebsite">Sponsor Website Link: </label></h5>
-                  <input type="url" name="sponsorWebsite" id="sponsorWebsite">
+                  <input type="url" name="sponsorWebsite" id="sponsorWebsite" required>
                 </div>
                 <div class="form-group" style="background-color: white;">
                   <h5><label for="sponsorLogo">Upload Sponsor Logo: </label></h5>
-                  <input type="file" name="sponsorLogo" id="sponsorLogo">
+                  <input type="file" name="sponsorLogo" id="sponsorLogo" required>
                 </div>
                 <input type="submit"class="btn btn-success mt-5" name="submit">
               </form>
