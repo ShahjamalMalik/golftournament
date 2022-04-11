@@ -112,4 +112,4 @@ if ($uploadOk == 0) {
 }
 
 
-//header("Location: ../sponsors.php");
+header("Location: ../sponsors.php");

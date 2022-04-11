@@ -261,9 +261,6 @@ a.nav-link:hover {
   .h1bg{
       font-size: 23px;
   }
-  .h3bg{
-    font-size: 20px;
-  }
   
   .golflogo{
     width: 80;
@@ -322,9 +319,7 @@ a.nav-link:hover {
 @media screen and (min-width : 540px) and (max-width : 1024px){
   .h1bg{
     font-size: 32px;
-  }
-  .h3bg{
-    font-size: 28px;
+    
   }
 	a.nav-link{
 		text-align: center;

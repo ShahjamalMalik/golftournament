@@ -114,7 +114,7 @@
     <div class="row">
       <div  class="container-fluid b-g">
         <h1 class="h1bg"><?php echo $year_number ?></h1>
-        <h1 class="h3bg">(Supporting the Ontario Central, West & North Regions)</h1>
+        <h2 class="h3bg">(Supporting the Ontario Central, West & North Regions)</h2>
         <div class="textBg">
           <a><img class="golflogo"
             src="images/ddsm-logo.png"

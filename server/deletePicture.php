@@ -25,7 +25,7 @@ if(isset($_POST['delete'])){
     $stmt->execute();
     $row = $stmt->fetch();
     $PathToFileToDelete = $row[0];
-
+    $PathToFileToDelete = "../" . $PathToFileToDelete;
     unlink($PathToFileToDelete);
 
     $sql = 'DELETE FROM images WHERE picture_id="'.$idToDelete.'"';
