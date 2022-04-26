@@ -18,3 +18,17 @@
 Note: To access Admin page => go to http://localhost/golftournament/admin.php
       It will prompt for loggin. Please click continue! and enter Email: admin@gmail.com
                                                                   password: 123456
+                                                                  
+                                                                  
+                                                                  
+                                                                  
+STACKS USED: 
+PHP, 
+MySQL,
+Apache Server/MyPhpAdmin,
+HTML/CSS,
+Bootstrap,
+JavaScript 
+and
+JQuery
+
